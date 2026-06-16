@@ -13,8 +13,8 @@ Welcome to the official repository for **GraphiGOAT**. This is a high-performanc
 ```text
 graphigoat/
 ├── assets/                     # Global static assets (logos, favicons, etc.)
-├── clients/
-│   └── magic-lite-workstreams/ # Client portal (private/unlinked tool)
+├── ml/
+│   └── workstreams/            # Client portal (private/unlinked tool)
 │       ├── index.html          # Interactive client workstream dashboard
 │       └── support.js          # App state logic (localStorage)
 ├── Dockerfile                  # Containerization instructions (Nginx-based)
@@ -30,7 +30,7 @@ graphigoat/
 | Page | URL Path | Visibility / SEO |
 | :--- | :--- | :--- |
 | **Public Homepage** | `/index.html` or `/` | Publicly indexed and searchable. |
-| **Magic Lite Workstreams** | `/clients/magic-lite-workstreams/` | Private client page (`noindex, nofollow`). Unlinked from the homepage. |
+| **Magic Lite Workstreams** | `/ml/workstreams/` | Private client page (`noindex, nofollow`). Unlinked from the homepage. |
 
 > [!NOTE]  
 > The **Magic Lite Workstreams** client page is fully static and client-side. Budget entries, workstream selections, and comments are saved securely within the **visitor's local browser storage (`localStorage`)**. No backend server is required to store this information.
@@ -65,4 +65,4 @@ This repository is optimized for instant deployment:
 ---
 
 ## 🛡️ Security & Privacy
-- Access to the client directory `/clients/magic-lite-workstreams/` is obscured and unlinked, but remains publicly accessible via direct URL. If true access restriction is required, configure password protection (basic auth) at the server level (e.g., in Nginx or your hosting panel).
+- Access to the client directory `/ml/workstreams/` is obscured and unlinked, but remains publicly accessible via direct URL. If true access restriction is required, configure password protection (basic auth) at the server level (e.g., in Nginx or your hosting panel).
