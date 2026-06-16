@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GraphiGOAT</title>
+  <meta name="description" content="GraphiGOAT is building a sharper home for brand, design, and visual impact.">
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      min-height:100vh;
+      font-family:"Schibsted Grotesk",system-ui,sans-serif;
+      color:#101827;
+      background:#faf7f1;
+      -webkit-font-smoothing:antialiased;
+    }
+    main{
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      padding:clamp(26px,5vw,72px);
+      position:relative;
+      overflow:hidden;
+    }
+    main:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at 78% 12%, rgba(255,122,0,.18), transparent 32%),
+        radial-gradient(circle at 14% 82%, rgba(8,173,189,.16), transparent 30%),
+        linear-gradient(135deg, rgba(255,255,255,.9), rgba(250,247,241,.84));
+      z-index:0;
+    }
+    .wrap{
+      width:min(1040px,100%);
+      position:relative;
+      z-index:1;
+      display:grid;
+      gap:clamp(34px,6vw,72px);
+      align-items:center;
+      justify-items:center;
+      text-align:center;
+    }
+    .logo{
+      width:min(480px,88vw);
+      height:auto;
+      display:block;
+      filter:drop-shadow(0 24px 44px rgba(4,19,42,.12));
+    }
+    .eyebrow{
+      color:#f47a16;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.32em;
+      text-transform:uppercase;
+    }
+    h1{
+      margin-top:14px;
+      font-family:"Instrument Serif",Georgia,serif;
+      font-size:clamp(54px,10vw,126px);
+      line-height:.88;
+      font-weight:400;
+      letter-spacing:0;
+      color:#07162e;
+      text-wrap:balance;
+    }
+    h1 em{
+      color:#234496;
+      font-style:italic;
+      text-decoration:underline;
+      text-decoration-color:#f47a16;
+      text-decoration-thickness:clamp(4px,.55vw,8px);
+      text-underline-offset:.1em;
+    }
+    p{
+      margin:24px auto 0;
+      max-width:680px;
+      color:rgba(16,24,39,.78);
+      font-size:clamp(17px,2.1vw,23px);
+      line-height:1.55;
+      text-wrap:pretty;
+    }
+    .signal{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:34px;
+      color:#07162e;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+    }
+    .signal span{
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:#08adbd;
+      box-shadow:0 0 0 6px rgba(8,173,189,.12);
+    }
+    @media (max-width:640px){
+      .logo{width:min(340px,88vw)}
+      h1{font-size:clamp(48px,18vw,78px)}
+      .signal{letter-spacing:.14em}
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="wrap" aria-label="GraphiGOAT coming soon">
+      <img class="logo" src="assets/graphigoat-logo.jpg" alt="GraphiGOAT">
+      <div>
+        <div class="eyebrow">New site in progress</div>
+        <h1>Let's level up<br><em>what people remember.</em></h1>
+        <p>GraphiGOAT is building a sharper home for brands that need to look credible, move faster, and leave a mark.</p>
+        <div class="signal"><span aria-hidden="true"></span> Creer. Impacter. Marquer.</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

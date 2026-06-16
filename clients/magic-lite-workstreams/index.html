@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Magic Lite Workstreams | GraphiGOAT Client Page</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="../../assets/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Schibsted+Grotesk:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Schibsted Grotesk',system-ui,sans-serif;color:#111827;-webkit-font-smoothing:antialiased;line-height:1.5;background:#F6F4EE;background-image:linear-gradient(180deg,rgba(8,173,189,.07),rgba(8,173,189,0) 420px);}
+  [data-logo] .cls-1{fill:#234496;}
+  [data-logo] .cls-2{fill:#08ADBD;}
+  ::selection{background:#234496;color:#fff;}
+  textarea::placeholder,input::placeholder{color:rgba(17,24,39,.68);}
+  textarea:focus,input:focus,button:focus-visible{outline:none;}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
+  @keyframes mlBreath{0%,100%{opacity:.85;}50%{opacity:1;}}
+  @media (max-width:880px){
+    [data-hero]{grid-template-columns:1fr!important;}
+    [data-rec]{order:2;max-width:460px;}
+    [data-rowcontent]{grid-template-columns:1fr!important;gap:18px!important;}
+    [data-decision]{width:100%!important;}
+    [data-notes]{grid-template-columns:1fr!important;}
+  }
+  @media (max-width:560px){
+    [data-sheet]{padding:26px 18px 40px!important;}
+    [data-rownum]{display:none!important;}
+    [data-rowcontent]{padding:20px 18px!important;}
+    [data-commentform]{grid-template-columns:1fr!important;}
+    [data-commentbutton]{width:100%!important;}
+  }
+</style>
+</helmet>
+
+<div style="min-height:100vh;padding:40px 20px 150px;">
+  <main data-sheet="" style="width:min(1080px,100%);margin:0 auto;background:#fff;border:1px solid rgba(35,68,150,.1);border-radius:14px;box-shadow:0 40px 100px -50px rgba(35,68,150,.5),0 2px 12px rgba(35,68,150,.06);padding:40px clamp(24px,5vw,60px) 54px;">
+
+    <!-- HEADER -->
+    <header style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;padding-bottom:22px;border-bottom:1.5px solid rgba(35,68,150,.85);">
+      <div style="display:flex;align-items:center;">
+        <svg data-logo="" viewBox="0 0 155.96 35.18" width="222" height="50" style="display:block;flex-shrink:0;">
+          <polygon class="cls-1" points="60.92 15.56 57.01 25.55 55.72 25.55 51.81 15.56 51.81 25.55 48.86 25.55 48.86 11.67 53 11.67 56.37 20.33 59.74 11.67 63.9 11.67 63.9 25.55 60.92 25.55 60.92 15.56"></polygon>
+          <path class="cls-1" d="M75.27,23.16h-6.2s-.87,2.39-.87,2.39h-3.24s5.37-13.87,5.37-13.87h3.7s5.35,13.87,5.35,13.87h-3.22s-.87-2.39-.87-2.39ZM69.87,20.6h4.6s-2.29-6.37-2.29-6.37l-2.31,6.37Z"></path>
+          <path class="cls-1" d="M86.46,11.45c2.87,0,4.68,1.39,5.74,3.04l-2.45,1.33c-.64-.98-1.83-1.75-3.29-1.75-2.52,0-4.35,1.93-4.35,4.56,0,2.62,1.83,4.56,4.35,4.56,1.27,0,2.39-.52,3-1.06v-1.69h-3.7s0-2.54,0-2.54h6.61s0,5.3,0,5.3c-1.41,1.58-3.39,2.62-5.91,2.62-4.06,0-7.38-2.83-7.38-7.2,0-4.39,3.33-7.18,7.38-7.18"></path>
+          <rect class="cls-1" x="94.51" y="11.67" width="2.95" height="13.87"></rect>
+          <path class="cls-1" d="M99.34,18.62c0-4.26,3.22-7.18,7.28-7.18,3.16,0,4.93,1.66,5.91,3.39l-2.54,1.25c-.58-1.12-1.83-2.02-3.37-2.02-2.41,0-4.24,1.93-4.24,4.56,0,2.62,1.83,4.56,4.24,4.56,1.54,0,2.79-.87,3.37-2.02l2.54,1.23c-1,1.73-2.75,3.41-5.91,3.41-4.06,0-7.28-2.91-7.28-7.18"></path>
+          <polygon class="cls-1" points="117.64 11.67 120.59 11.67 120.59 22.95 126.46 22.95 126.46 25.55 117.64 25.55 117.64 11.67"></polygon>
+          <rect class="cls-1" x="128.31" y="11.67" width="2.95" height="13.87"></rect>
+          <polygon class="cls-1" points="137 14.27 132.94 14.27 132.94 11.67 144.01 11.67 144.01 14.27 139.98 14.27 139.98 25.55 137 25.55 137 14.27"></polygon>
+          <polygon class="cls-1" points="145.69 11.67 155.51 11.67 155.51 14.21 148.65 14.21 148.65 17.23 155.37 17.23 155.37 19.77 148.65 19.77 148.65 22.99 155.51 22.99 155.51 25.55 145.69 25.55 145.69 11.67"></polygon>
+          <polygon class="cls-1" points="49.68 33.27 48.53 30.74 49.24 30.74 50.09 32.69 51.79 30.74 52.59 30.74 50.33 33.27 49.93 35.1 49.28 35.1 49.68 33.27"></polygon>
+          <path class="cls-1" d="M54.73,30.66c1.14,0,2.05.71,2.05,1.92,0,1.46-1.09,2.6-2.47,2.6-1.14,0-2.05-.71-2.05-1.92,0-1.45,1.09-2.59,2.47-2.59M54.69,31.25c-.95,0-1.75.84-1.75,1.97,0,.88.62,1.38,1.41,1.38.95,0,1.75-.84,1.75-1.97,0-.88-.63-1.38-1.41-1.38"></path>
+          <path class="cls-1" d="M57.38,33.71c0-.1.01-.29.04-.41l.56-2.56h.66s-.56,2.54-.56,2.54c-.03.15-.05.25-.05.37,0,.56.38.95,1.06.95.78,0,1.14-.48,1.31-1.22l.58-2.64h.66s-.58,2.65-.58,2.65c-.24,1.07-.75,1.79-2,1.79-1.07,0-1.69-.58-1.69-1.47"></path>
+          <path class="cls-1" d="M63.54,33.42h-.86s-.37,1.68-.37,1.68h-.65s.96-4.36.96-4.36h1.68c.65,0,1.27.44,1.27,1.16,0,.8-.56,1.4-1.37,1.48l.73,1.71h-.72s-.67-1.68-.67-1.68ZM64.89,31.96c0-.38-.34-.65-.69-.65h-1.04s-.34,1.53-.34,1.53h1.1c.62,0,.97-.39.97-.88"></path>
+          <polygon class="cls-1" points="69.29 31.31 67.93 31.31 68.06 30.74 71.42 30.74 71.29 31.31 69.94 31.31 69.11 35.1 68.46 35.1 69.29 31.31"></polygon>
+          <path class="cls-1" d="M73.01,33.42h-.86s-.37,1.68-.37,1.68h-.65s.96-4.36.96-4.36h1.68c.65,0,1.27.44,1.27,1.16,0,.8-.56,1.4-1.37,1.48l.73,1.71h-.72s-.67-1.68-.67-1.68ZM74.36,31.96c0-.38-.34-.65-.69-.65h-1.04s-.34,1.53-.34,1.53h1.1c.62,0,.97-.39.97-.88"></path>
+          <path class="cls-1" d="M75.53,33.71c0-.1.01-.29.04-.41l.56-2.56h.66s-.56,2.54-.56,2.54c-.03.15-.05.25-.05.37,0,.56.38.95,1.06.95.78,0,1.14-.48,1.31-1.22l.58-2.64h.66s-.58,2.65-.58,2.65c-.24,1.07-.75,1.79-2,1.79-1.07,0-1.69-.58-1.69-1.47"></path>
+          <path class="cls-1" d="M80.19,33.91c.3.42.84.69,1.45.69s.88-.39.88-.72c0-.35-.42-.52-.88-.7-.59-.23-1.27-.49-1.27-1.19s.64-1.31,1.59-1.31c.68,0,1.29.26,1.62.69l-.43.46c-.29-.39-.8-.58-1.28-.58s-.8.3-.8.63c0,.31.4.48.86.66.6.23,1.29.51,1.29,1.22s-.58,1.41-1.63,1.41c-.8,0-1.5-.33-1.82-.79l.43-.48Z"></path>
+          <polygon class="cls-1" points="85.5 31.31 84.15 31.31 84.28 30.74 87.63 30.74 87.51 31.31 86.16 31.31 85.33 35.1 84.67 35.1 85.5 31.31"></polygon>
+          <polygon class="cls-1" points="88.31 30.74 91.24 30.74 91.11 31.31 88.84 31.31 88.56 32.59 90.79 32.59 90.65 33.16 88.43 33.16 88.13 34.52 90.4 34.52 90.28 35.1 87.35 35.1 88.31 30.74"></polygon>
+          <path class="cls-1" d="M95.42,32.6c0,1.18-.83,2.5-2.77,2.5h-1.55s.96-4.36.96-4.36h1.52c.97,0,1.84.77,1.84,1.86M94.73,32.64c0-.76-.54-1.33-1.27-1.33h-.88s-.71,3.21-.71,3.21h.89c1.22,0,1.97-.87,1.97-1.88"></path>
+          <polygon class="cls-1" points="98.35 30.74 99.01 30.74 98.17 34.52 100.15 34.52 100.03 35.1 97.39 35.1 98.35 30.74"></polygon>
+          <polygon class="cls-1" points="101.73 30.74 102.39 30.74 101.43 35.1 100.77 35.1 101.73 30.74"></polygon>
+          <path class="cls-1" d="M105.16,30.66c.86,0,1.45.44,1.74.99l-.59.27c-.2-.42-.69-.67-1.23-.67-.92,0-1.76.83-1.76,1.97,0,.81.54,1.38,1.41,1.38.46,0,.81-.2,1.07-.43l.18-.78h-1.4s.12-.58.12-.58h2.05s-.36,1.62-.36,1.62c-.44.47-1.03.75-1.7.75-1.19,0-2.05-.77-2.05-1.92,0-1.5,1.11-2.59,2.52-2.59"></path>
+          <polygon class="cls-1" points="110.57 33.15 108.16 33.15 107.73 35.1 107.07 35.1 108.03 30.74 108.69 30.74 108.29 32.57 110.7 32.57 111.1 30.74 111.76 30.74 110.79 35.1 110.14 35.1 110.57 33.15"></polygon>
+          <polygon class="cls-1" points="113.66 31.31 112.3 31.31 112.43 30.74 115.79 30.74 115.66 31.31 114.31 31.31 113.48 35.1 112.83 35.1 113.66 31.31"></polygon>
+          <polygon class="cls-1" points="116.47 30.74 117.12 30.74 116.16 35.1 115.51 35.1 116.47 30.74"></polygon>
+          <polygon class="cls-1" points="118.56 31.6 117.79 35.1 117.13 35.1 118.09 30.74 118.77 30.74 120.38 34.16 121.14 30.74 121.8 30.74 120.83 35.1 120.2 35.1 118.56 31.6"></polygon>
+          <path class="cls-1" d="M124.56,30.66c.86,0,1.45.44,1.74.99l-.59.27c-.2-.42-.69-.67-1.23-.67-.92,0-1.76.83-1.76,1.97,0,.81.54,1.38,1.41,1.38.46,0,.81-.2,1.07-.43l.18-.78h-1.4s.12-.58.12-.58h2.05s-.36,1.62-.36,1.62c-.44.47-1.03.75-1.7.75-1.19,0-2.05-.77-2.05-1.92,0-1.5,1.11-2.59,2.52-2.59"></path>
+          <path class="cls-1" d="M129.12,30.74h1.69c.79,0,1.25.53,1.25,1.15,0,.66-.44,1.53-1.71,1.53h-1.17s-.37,1.68-.37,1.68h-.65s.96-4.36.96-4.36ZM131.38,31.95c0-.35-.28-.63-.67-.63h-1.06s-.34,1.53-.34,1.53h1.1c.62,0,.97-.41.97-.9"></path>
+          <path class="cls-1" d="M134.55,34.2h-2.14s-.55.9-.55.9h-.75s2.69-4.36,2.69-4.36h.82s.77,4.36.77,4.36h-.69s-.16-.9-.16-.9ZM132.74,33.61h1.76s-.37-2.29-.37-2.29l-1.39,2.29Z"></path>
+          <path class="cls-1" d="M137.8,33.42h-.86s-.37,1.68-.37,1.68h-.65s.96-4.36.96-4.36h1.68c.65,0,1.27.44,1.27,1.16,0,.8-.56,1.4-1.37,1.48l.73,1.71h-.72s-.67-1.68-.67-1.68ZM139.14,31.96c0-.38-.34-.65-.69-.65h-1.04s-.34,1.53-.34,1.53h1.1c.62,0,.97-.39.97-.88"></path>
+          <polygon class="cls-1" points="141.79 31.31 140.44 31.31 140.57 30.74 143.92 30.74 143.8 31.31 142.44 31.31 141.61 35.1 140.96 35.1 141.79 31.31"></polygon>
+          <polygon class="cls-1" points="145.06 31.6 144.29 35.1 143.64 35.1 144.6 30.74 145.27 30.74 146.89 34.16 147.65 30.74 148.3 30.74 147.34 35.1 146.71 35.1 145.06 31.6"></polygon>
+          <polygon class="cls-1" points="149.27 30.74 152.2 30.74 152.07 31.31 149.8 31.31 149.51 32.59 151.74 32.59 151.61 33.16 149.38 33.16 149.08 34.52 151.35 34.52 151.23 35.1 148.31 35.1 149.27 30.74"></polygon>
+          <path class="cls-1" d="M153.93,33.42h-.86s-.37,1.68-.37,1.68h-.65s.96-4.36.96-4.36h1.68c.65,0,1.27.44,1.27,1.16,0,.8-.56,1.4-1.37,1.48l.73,1.71h-.72s-.67-1.68-.67-1.68ZM155.27,31.96c0-.38-.34-.65-.69-.65h-1.04s-.34,1.53-.34,1.53h1.1c.62,0,.97-.39.97-.88"></path>
+          <rect class="cls-1" x="39.54" y="0" width="2.6" height="35.13"></rect>
+          <polygon class="cls-2" points="34.22 0 20.15 21.15 7.72 0 4.62 0 20.15 26.67 34.18 5.43 34.18 35.13 36.78 35.13 36.78 0 34.22 0"></polygon>
+          <polygon class="cls-1" points="5.25 35.13 5.25 6.61 20.15 32.29 31.67 14.26 31.67 19.32 21.65 35.13 18.58 35.13 7.84 16.86 7.84 35.13 5.25 35.13"></polygon>
+          <polygon class="cls-1" points="1.52 0 2.6 1.86 2.6 35.13 0 35.13 0 3.2 0 0 1.52 0"></polygon>
+        </svg>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-weight:700;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#234496;">Design Proposal</div>
+        <div style="margin-top:5px;font-size:11px;letter-spacing:.04em;color:rgba(17,24,39,.68);">Prepared by {{ advisorName }} · June 2026</div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section data-hero="" style="display:grid;grid-template-columns:1fr minmax(300px,380px);gap:clamp(30px,5vw,56px);align-items:start;padding-top:52px;">
+      <div>
+        <h1 style="font-family: 'Instrument Serif',Georgia,serif; font-weight: 400; font-size: clamp(35px,6.6vw,70px); line-height: .92; letter-spacing: -.012em; color: #111827; text-wrap: balance">The sconce can wait.<br><em style="font-style:italic;color:#234496;text-decoration:underline;text-decoration-color:#08ADBD;text-decoration-thickness:4px;text-underline-offset:6px;">The brand can’t.</em></h1>
+        <p style="margin-top:24px;max-width:34em;font-size:clamp(16px,1.9vw,20px);line-height:1.55;color:rgba(17,24,39,.78);text-wrap:pretty;">Seven brand and sales-design workstreams we can start now. None waits on the new product, and each one finishes before it lands. For each one below, choose <b style="color:#234496;font-weight:700;">Keep</b> to light it for the batch, <b style="color:#234496;font-weight:700;">Amend</b> to request a change, or <b style="color:#234496;font-weight:700;">Cut</b> to drop it, then send it back.</p>
+      </div>
+
+      <aside data-rec="" style="border:1.5px solid rgba(35,68,150,.86);border-radius:12px;overflow:hidden;background:#fff;">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 18px;color:#fff;background:#234496;border-bottom:4px solid #08ADBD;">
+          <span style="font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.05;">My suggestion</span>
+          <button onClick="{{ applyRec }}" style="border:1px solid rgba(255,255,255,.4);border-radius:8px;background:rgba(255,255,255,.1);color:#fff;padding:9px 12px;font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:background .15s;" style-hover="{{ recBtnHover }}">Use these picks</button>
+        </div>
+        <div style="padding:8px 18px 16px;">
+          <sc-for list="{{ recList }}" as="r" hint-placeholder-count="4">
+            <div style="display:grid;grid-template-columns:42px 1fr;gap:12px;align-items:center;padding:12px 0;border-top:1px solid rgba(35,68,150,.1);">
+              <span style="font-family:'Instrument Serif',Georgia,serif;font-size:30px;color:#234496;line-height:1;text-align:center;">{{ r.num }}</span>
+              <div>
+                <div style="font-weight:700;font-size:15px;color:#111827;line-height:1.15;">{{ r.name }}</div>
+                <div style="margin-top:2px;font-size:12.5px;color:rgba(17,24,39,.72);line-height:1.4;">{{ r.why }}</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </aside>
+    </section>
+
+    <!-- WORKSTREAMS -->
+    <section ref="{{ setListRef }}" style="margin-top:clamp(44px,6vw,68px);">
+      <div style="border:1.5px solid rgba(35,68,150,.88);border-radius:12px;overflow:hidden;">
+        <sc-for list="{{ rows }}" as="row" hint-placeholder-count="7">
+          <article style="{{ row.rowStyle }}">
+            <div data-rownum="" style="{{ row.numStyle }}">{{ row.num }}</div>
+            <div data-rowcontent="" style="padding:clamp(22px,3.2vw,34px) clamp(20px,3.5vw,38px);">
+              <div>
+                <div style="{{ row.tagRowStyle }}">
+                  <span style="{{ row.chipStyle }}">Recommended</span>
+                  <span style="{{ row.statusStyle }}">{{ row.statusLabel }}</span>
+                </div>
+                <h3 style="{{ row.nameStyle }}">{{ row.name }}</h3>
+                <p style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:clamp(18px,2.2vw,24px);line-height:1.25;color:#111827;margin-top:6px;">{{ row.essence }}</p>
+                <p style="margin-top:12px;max-width:46em;font-size:clamp(15px,1.6vw,16.5px);line-height:1.6;color:rgba(17,24,39,.78);text-wrap:pretty;">{{ row.desc }}</p>
+                <div role="group" style="display:flex;gap:10px;margin-top:24px;max-width:430px;">
+                  <button onClick="{{ row.onKeep }}" style="{{ row.keepStyle }}" style-hover="{{ row.segHover }}">Keep</button>
+                  <button onClick="{{ row.onAmend }}" style="{{ row.amendStyle }}" style-hover="{{ row.segHover }}">Amend</button>
+                  <button onClick="{{ row.onCut }}" style="{{ row.cutStyle }}" style-hover="{{ row.segHover }}">Cut</button>
+                </div>
+                <div style="{{ row.noteWrapStyle }}">
+                  <div data-commentform="" style="display:grid;grid-template-columns:minmax(0,520px) auto;gap:10px;align-items:start;margin-top:14px;">
+                    <textarea value="{{ row.draftNote }}" onChange="{{ row.onDraftNote }}" placeholder="{{ row.notePlaceholder }}" style="width:100%;font-family:'Schibsted Grotesk',sans-serif;font-size:15px;color:#111827;background:#FAF8F3;border:1px solid rgba(35,68,150,.18);border-radius:10px;padding:11px 13px;resize:vertical;min-height:62px;line-height:1.5;" style-focus="{{ fieldFocus }}"></textarea>
+                    <button data-commentbutton="" onClick="{{ row.onAddComment }}" disabled="{{ row.commentDisabled }}" style="{{ row.addCommentStyle }}" style-hover="{{ addCommentHover }}">Add comment</button>
+                  </div>
+                  <div style="{{ row.commentsWrapStyle }}">
+                    <sc-for list="{{ row.comments }}" as="comment" hint-placeholder-count="2">
+                      <div style="max-width:620px;margin-top:10px;border:1px solid rgba(35,68,150,.12);border-radius:10px;background:#fff;padding:11px 13px;">
+                        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+                          <strong style="font-size:12px;color:#111827;">{{ comment.author }}</strong>
+                          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+                            <span style="font-size:11px;color:rgba(17,24,39,.68);">{{ comment.when }}</span>
+                            <button onClick="{{ comment.onDelete }}" style="{{ comment.deleteStyle }}" style-hover="{{ deleteCommentHover }}">Delete</button>
+                          </div>
+                        </div>
+                        <p style="margin-top:5px;font-size:14px;line-height:1.5;color:rgba(17,24,39,.78);white-space:pre-wrap;">{{ comment.text }}</p>
+                      </div>
+                    </sc-for>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </sc-for>
+      </div>
+
+      <!-- NOTES + BUDGET -->
+      <div data-notes="" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,320px);gap:18px;margin-top:22px;">
+        <div style="border:1px solid rgba(35,68,150,.16);border-radius:12px;background:#fff;padding:18px;">
+          <label style="display:block;font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#111827;">Display name <span style="color:rgba(17,24,39,.68);font-weight:600;">(optional)</span></label>
+          <input value="{{ stakeholderName }}" onChange="{{ onStakeholderName }}" placeholder="Name or initials" style="width:100%;margin-top:10px;font-family:'Schibsted Grotesk',sans-serif;font-size:15px;color:#111827;background:#FAF8F3;border:1px solid rgba(35,68,150,.16);border-radius:10px;padding:12px 13px;line-height:1.55;" style-focus="{{ fieldFocus }}">
+          <p style="margin-top:10px;font-size:12.5px;line-height:1.4;color:rgba(17,24,39,.72);">Used only as a label. Your delete access is remembered by this browser.</p>
+        </div>
+        <div style="border:1px solid rgba(35,68,150,.16);border-radius:12px;background:#fff;padding:18px;">
+          <label style="display:block;font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#111827;">Budget guidance <span style="color:rgba(17,24,39,.68);font-weight:600;">(optional)</span></label>
+          <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;margin-top:10px;">
+            <div style="display:flex;align-items:center;gap:8px;border:1px solid rgba(35,68,150,.18);border-radius:10px;background:#FAF8F3;padding:0 14px;min-height:50px;">
+            <span style="font-family:'Instrument Serif',Georgia,serif;font-size:22px;color:#234496;">$</span>
+              <input value="{{ budgetDraft }}" onChange="{{ onBudgetDraft }}" inputmode="numeric" placeholder="25,000" style="flex:1;min-width:0;border:none;background:transparent;font-family:'Schibsted Grotesk',sans-serif;font-size:16px;font-weight:700;color:#111827;padding:12px 0;">
+            <span style="font-weight:700;font-size:11px;letter-spacing:.06em;color:rgba(17,24,39,.68);">CAD</span>
+            </div>
+            <button data-commentbutton="" onClick="{{ onAddBudgetEntry }}" disabled="{{ budgetEntryDisabled }}" style="{{ budgetEntryButtonStyle }}" style-hover="{{ addCommentHover }}">Add</button>
+          </div>
+          <div style="{{ budgetEntriesWrapStyle }}">
+            <sc-for list="{{ budgetEntries }}" as="entry" hint-placeholder-count="2">
+              <div style="margin-top:10px;border:1px solid rgba(35,68,150,.12);border-radius:10px;background:#fff;padding:11px 13px;">
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+                  <strong style="font-size:12px;color:#111827;">{{ entry.author }}</strong>
+                  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+                    <span style="font-size:11px;color:rgba(17,24,39,.68);">{{ entry.when }}</span>
+                    <button onClick="{{ entry.onDelete }}" style="{{ entry.deleteStyle }}" style-hover="{{ deleteCommentHover }}">Delete</button>
+                  </div>
+                </div>
+                <p style="margin-top:5px;font-size:17px;line-height:1.3;color:#111827;font-weight:700;">${{ entry.amount }} <span style="font-size:11px;letter-spacing:.06em;color:rgba(17,24,39,.68);">CAD</span></p>
+              </div>
+            </sc-for>
+          </div>
+          <p style="margin-top:10px;font-size:12.5px;line-height:1.4;color:rgba(17,24,39,.72);">Captures separate budget signals without overwriting anyone's input.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- STICKY DOCK -->
+<div style="position:fixed;left:0;right:0;bottom:0;z-index:40;background:#234496;box-shadow:0 -10px 30px rgba(35,68,150,.28);">
+  <div style="height:3px;background:rgba(8,173,189,.16);overflow:hidden;">
+    <div style="{{ progressStyle }}"></div>
+  </div>
+  <div style="width:min(1080px,100%);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px clamp(18px,4vw,40px);flex-wrap:wrap;">
+    <div style="font-size:13.5px;color:rgba(255,255,255,.78);font-variant-numeric:tabular-nums;">{{ tally }}</div>
+    <div style="display:flex;gap:10px;">
+      <button onClick="{{ onCopy }}" style="min-height:44px;border-radius:9px;padding:11px 18px;font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;border:1px solid rgba(255,255,255,.34);background:transparent;color:rgba(255,255,255,.9);cursor:pointer;transition:all .15s;" style-hover="{{ copyHover }}">Copy response</button>
+      <button onClick="{{ onSend }}" disabled="{{ sendDisabled }}" style="{{ sendStyle }}">Send response</button>
+    </div>
+  </div>
+</div>
+
+<div style="{{ toastStyle }}">{{ toast }}</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;clientCompany&quot;: {&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Magic Lite&quot;,&quot;tsType&quot;:&quot;string&quot;},
+  &quot;advisorName&quot;: {&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Mohamed Nassa&quot;,&quot;tsType&quot;:&quot;string&quot;},
+  &quot;recipientEmail&quot;: {&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;nassaflair@gmail.com&quot;,&quot;tsType&quot;:&quot;string&quot;}
+}">
+class Component extends DCLogic {
+  constructor(props){
+    super(props);
+    this.KEY = 'magiclite_workstreams_doc_2026';
+    this.OWNER_KEY = 'magiclite_workstreams_contributor_id';
+    this.ownerId = this.getOwnerId();
+    this.ITEMS = [
+      {n:"01", name:"Presentation system", essence:"Every deck opens at brand level.", desc:"The PowerPoint overhaul from our call. A modular master your team updates in minutes, not days, while staying consistently on brand.", recommended:true, why:"A reusable base every future sales and investor deck inherits."},
+      {n:"02", name:"Brand asset consolidation", essence:"One source of truth.", desc:"A single document locking logo, colour, type, layout rules and supplier handoff, so nothing drifts after the agency change.", recommended:true, why:"Locks the rules after the agency transition."},
+      {n:"03", name:"Merchandising displays", essence:"Retail presence, ready before the product.", desc:"Existing displays brought up to standard, the gaps designed, and the sconce display concept built ahead of launch.", recommended:true, why:"Keeps retail presence ahead of the product."},
+      {n:"04", name:"Packaging refresh", essence:"Worthy of what's inside.", desc:"Packaging for current SKUs raised to match the level of the product within the box, on shelf and in the unboxing.", recommended:false, why:""},
+      {n:"05", name:"Sales collateral system", essence:"Every sell sheet, one company.", desc:"Sell sheets, cut sheets and spec sheets unified under one visual standard across every buyer and distributor touchpoint.", recommended:true, why:"Unifies the buyer-facing sheets and specs."},
+      {n:"06", name:"Instruction manuals", essence:"A better unboxing, fewer calls.", desc:"Clearer, on-brand manuals that improve the first impression and quietly reduce avoidable support tickets.", recommended:false, why:""},
+      {n:"07", name:"Social content system", essence:"Consistent publishing, on tap.", desc:"Branded post templates and product visual formats, with ongoing monthly production support optional.", recommended:false, why:""}
+    ];
+    this.state = {
+      verdicts:{}, comments:{}, draftNotes:{},
+      stakeholderName:'', budgetEntries:[], budgetDraft:'',
+      toast:'', toastOn:false
+    };
+    this.toastT = null;
+  }
+
+  componentDidMount(){ this.restore(); }
+  componentWillUnmount(){ clearTimeout(this.toastT); }
+
+  advisor(){ return this.props.advisorName || 'Mohamed Nassa'; }
+  company(){ return this.props.clientCompany || 'Magic Lite'; }
+  getOwnerId(){
+    try{
+      let id = localStorage.getItem(this.OWNER_KEY);
+      if(!id){
+        id = 'ml-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2,10);
+        localStorage.setItem(this.OWNER_KEY, id);
+      }
+      return id;
+    }catch(e){
+      if(!this.fallbackOwnerId){
+        this.fallbackOwnerId = 'ml-' + Math.random().toString(36).slice(2,10);
+      }
+      return this.fallbackOwnerId;
+    }
+  }
+
+  setVerdict(idx, v){
+    this.setState(s => ({ verdicts: { ...s.verdicts, [idx]: s.verdicts[idx]===v ? null : v } }), () => this.persist());
+  }
+  currentAuthor(){
+    const name = (this.state.stakeholderName || '').trim();
+    return name || 'Contributor';
+  }
+  stamp(){
+    try{
+      return new Date().toLocaleString([], { month:'short', day:'numeric', hour:'numeric', minute:'2-digit' });
+    }catch(e){ return ''; }
+  }
+  cleanComment(c){
+    if(typeof c === 'string') return c.trim() ? { author:'Saved note', text:c.trim(), when:'', ownerId:this.ownerId } : null;
+    if(!c || !c.text) return null;
+    const author = c.author === 'Stakeholder' ? 'Contributor' : (c.author || 'Contributor');
+    return { author, text:String(c.text), when:c.when || '', ownerId:c.ownerId || this.ownerId };
+  }
+  commentListFrom(raw){
+    if(Array.isArray(raw)) return raw.map(c=>this.cleanComment(c)).filter(Boolean);
+    const one = this.cleanComment(raw);
+    return one ? [one] : [];
+  }
+  commentListFor(idx){
+    return this.commentListFrom(this.state.comments[idx]);
+  }
+  canDeleteComment(comment){
+    return !!comment && !!comment.ownerId && comment.ownerId === this.ownerId;
+  }
+  normalizeComments(raw){
+    const out = {};
+    Object.keys(raw || {}).forEach(k=>{
+      const value = raw[k];
+      const list = Array.isArray(value) ? value.map(c=>this.cleanComment(c)).filter(Boolean) : [this.cleanComment(value)].filter(Boolean);
+      if(list.length) out[k] = list;
+    });
+    return out;
+  }
+  setDraftNote(idx, val){
+    this.setState(s => ({ draftNotes: { ...s.draftNotes, [idx]: val } }), () => this.persist());
+  }
+  addComment(idx){
+    const text = (this.state.draftNotes[idx] || '').trim();
+    if(!text) return;
+    const entry = { author:this.currentAuthor(), text, when:this.stamp(), ownerId:this.ownerId };
+    this.setState(s => ({
+      comments: { ...s.comments, [idx]: [ ...(s.comments[idx] || []), entry ] },
+      draftNotes: { ...s.draftNotes, [idx]: '' }
+    }), () => this.persist());
+    this.showToast('Comment added.');
+  }
+  deleteComment(idx, commentIdx){
+    const target = this.commentListFor(idx)[commentIdx];
+    if(!this.canDeleteComment(target)) return;
+    this.setState(s => {
+      const current = this.commentListFrom(s.comments[idx]);
+      const nextList = current.filter((_, i)=>i !== commentIdx);
+      const nextComments = { ...s.comments };
+      if(nextList.length) nextComments[idx] = nextList;
+      else delete nextComments[idx];
+      return { comments: nextComments };
+    }, () => this.persist());
+    this.showToast('Comment deleted.');
+  }
+  setStakeholderName(val){
+    this.setState({ stakeholderName:val }, () => this.persist());
+  }
+  budgetAmount(value){
+    return String(value || '').replace(/[^\d.,\s-]/g, '').trim();
+  }
+  cleanBudgetEntry(entry){
+    if(typeof entry === 'string'){
+      const amount = this.budgetAmount(entry);
+      return amount ? { author:'Saved budget', amount, when:'', ownerId:this.ownerId } : null;
+    }
+    if(!entry || !entry.amount) return null;
+    const author = entry.author === 'Stakeholder' ? 'Contributor' : (entry.author || 'Contributor');
+    const amount = this.budgetAmount(entry.amount);
+    return amount ? { author, amount, when:entry.when || '', ownerId:entry.ownerId || this.ownerId } : null;
+  }
+  normalizeBudgetEntries(raw, legacyBudget){
+    const list = Array.isArray(raw) ? raw.map(e=>this.cleanBudgetEntry(e)).filter(Boolean) : [];
+    if(list.length) return list;
+    const legacy = this.cleanBudgetEntry(legacyBudget || '');
+    return legacy ? [legacy] : [];
+  }
+  setBudgetDraft(val){
+    this.setState({ budgetDraft:val }, () => this.persist());
+  }
+  addBudgetEntry(){
+    const amount = this.budgetAmount(this.state.budgetDraft);
+    if(!amount) return;
+    const entry = { author:this.currentAuthor(), amount, when:this.stamp(), ownerId:this.ownerId };
+    this.setState(s => ({
+      budgetEntries: [ ...(s.budgetEntries || []), entry ],
+      budgetDraft: ''
+    }), () => this.persist());
+    this.showToast('Budget added.');
+  }
+  deleteBudgetEntry(entryIdx){
+    const target = this.normalizeBudgetEntries(this.state.budgetEntries, '')[entryIdx];
+    if(!this.canDeleteComment(target)) return;
+    this.setState(s => ({
+      budgetEntries: this.normalizeBudgetEntries(s.budgetEntries, '').filter((_, i)=>i !== entryIdx)
+    }), () => this.persist());
+    this.showToast('Budget deleted.');
+  }
+  applyRec(){
+    const v = {};
+    this.ITEMS.forEach((it,i)=>{ v[i] = it.recommended ? 'keep' : null; });
+    this.setState({ verdicts: v }, () => this.persist());
+    this.showToast('Recommended picks applied.');
+    if(this.listEl){ window.scrollTo({ top: this.listEl.offsetTop - 24, behavior:'smooth' }); }
+  }
+
+  persist(){
+    try{
+      localStorage.setItem(this.KEY, JSON.stringify({
+        verdicts: this.state.verdicts,
+        comments: this.state.comments,
+        draftNotes: this.state.draftNotes,
+        stakeholderName: this.state.stakeholderName,
+        budgetEntries: this.state.budgetEntries,
+        budgetDraft: this.state.budgetDraft
+      }));
+    }catch(e){}
+  }
+  restore(){
+    try{
+      const raw = localStorage.getItem(this.KEY);
+      if(!raw) return;
+      const s = JSON.parse(raw);
+      this.setState({
+        verdicts: s.verdicts || {},
+        comments: this.normalizeComments(s.comments || s.notes || {}),
+        draftNotes: s.draftNotes || {},
+        stakeholderName: s.stakeholderName || '',
+        budgetEntries: this.normalizeBudgetEntries(s.budgetEntries, s.budget),
+        budgetDraft: s.budgetDraft || ''
+      });
+    }catch(e){}
+  }
+
+  counts(){
+    let k=0,a=0,c=0,done=0;
+    this.ITEMS.forEach((it,i)=>{ const v=this.state.verdicts[i]; if(v==='keep')k++;else if(v==='amend')a++;else if(v==='cut')c++; if(v)done++; });
+    return { k,a,c,done,total:this.ITEMS.length };
+  }
+
+  buildResponse(){
+    const adv = this.advisor();
+    const L = [];
+    L.push("Hi " + adv.split(' ')[0] + ",");
+    L.push("");
+    L.push("Here is our response on the design workstreams:");
+    L.push("");
+    this.ITEMS.forEach((it,i)=>{
+      const v = this.state.verdicts[i];
+      const ver = v ? v.toUpperCase() : "NOT DECIDED";
+      let line = it.n + " · " + it.name + " · " + ver;
+      L.push(line);
+      const comments = this.commentListFor(i);
+      comments.forEach(c=>{
+        L.push("   - " + (c.author || 'Contributor') + ": " + c.text);
+      });
+    });
+    const budgetEntries = this.normalizeBudgetEntries(this.state.budgetEntries, '');
+    if(budgetEntries.length){
+      L.push("");
+      L.push("Budget guidance:");
+      budgetEntries.forEach(entry=>{
+        L.push("- " + (entry.author || 'Contributor') + ": $" + entry.amount + " CAD");
+      });
+    }
+    L.push(""); L.push("Best,"); L.push(this.company());
+    return L.join("\n");
+  }
+
+  onSendClick(){
+    if(this.counts().done === 0) return;
+    const to = (this.props.recipientEmail || '').trim() || 'nassaflair@gmail.com';
+    const subject = "Re: Design workstreams, our picks";
+    const body = this.buildResponse();
+    const gmailUrl = "https://mail.google.com/mail/?view=cm&tf=cm"
+      + "&to=" + encodeURIComponent(to)
+      + "&su=" + encodeURIComponent(subject)
+      + "&body=" + encodeURIComponent(body);
+    window.open(gmailUrl, '_blank');
+  }
+  async onCopyClick(){
+    const body = this.buildResponse();
+    try{ await navigator.clipboard.writeText(body); this.showToast("Response copied. Paste it into your reply."); }
+    catch(e){
+      const t=document.createElement('textarea'); t.value=body; document.body.appendChild(t); t.select();
+      try{ document.execCommand('copy'); }catch(_){}
+      t.remove(); this.showToast("Response copied.");
+    }
+  }
+  showToast(msg){
+    this.setState({ toast:msg, toastOn:true });
+    clearTimeout(this.toastT);
+    this.toastT = setTimeout(()=>this.setState({ toastOn:false }), 2600);
+  }
+
+  segStyle(active, kind){
+    const base = {
+      flex:1, textAlign:'center', padding:'13px 10px',
+      fontFamily:"'Schibsted Grotesk',sans-serif", fontSize:'12px', fontWeight:700,
+      letterSpacing:'.12em', textTransform:'uppercase', cursor:'pointer', borderRadius:'10px',
+      border:'1.5px solid rgba(35,68,150,.2)', background:'rgba(255,255,255,.7)',
+      color:'rgba(17,24,39,.72)', transition:'all .15s ease'
+    };
+    if(!active) return base;
+    if(kind==='keep')  return { ...base, background:'#234496', borderColor:'#234496', color:'#fff', boxShadow:'0 10px 24px -10px rgba(35,68,150,.7)' };
+    if(kind==='amend') return { ...base, background:'#234496', borderColor:'#234496', color:'#fff' };
+    return { ...base, background:'#7A828F', borderColor:'#7A828F', color:'#fff' };
+  }
+
+  commentButtonStyle(disabled){
+    return {
+      minHeight:'44px', borderRadius:'9px', padding:'11px 14px',
+      fontWeight:700, fontSize:'11px', letterSpacing:'.06em', textTransform:'uppercase',
+      border: disabled ? '1px solid rgba(35,68,150,.32)' : '1px solid transparent',
+      background: disabled ? '#E8EEF8' : '#234496',
+      color: disabled ? '#234496' : '#fff',
+      cursor: disabled ? 'not-allowed' : 'pointer',
+      whiteSpace:'nowrap', transition:'all .15s'
+    };
+  }
+  deleteCommentButtonStyle(show){
+    return {
+      display: show ? 'inline-flex' : 'none', alignItems:'center',
+      border:'1px solid rgba(35,68,150,.14)', borderRadius:'100px',
+      background:'rgba(35,68,150,.04)', color:'#111827',
+      padding:'4px 8px', fontFamily:"'Schibsted Grotesk',sans-serif",
+      fontSize:'10px', fontWeight:700, letterSpacing:'.06em',
+      textTransform:'uppercase', cursor:'pointer', transition:'all .15s'
+    };
+  }
+
+  renderVals(){
+    const C = this.counts();
+    const fieldFocus = { borderColor:'#08ADBD', background:'#fff' };
+
+    const STATUS = {
+      keep:  { label:'Lit', color:'#234496', bg:'rgba(8,173,189,.12)' },
+      amend: { label:'To adjust', color:'#111827', bg:'rgba(17,24,39,.06)' },
+      cut:   { label:'Not now', color:'#565E6B', bg:'rgba(35,68,150,.06)' }
+    };
+
+    const rows = this.ITEMS.map((it, idx)=>{
+      const v = this.state.verdicts[idx] || null;
+      const isKeep=v==='keep', isAmend=v==='amend', isCut=v==='cut';
+      const isLastRow = idx === this.ITEMS.length-1;
+      const comments = this.commentListFor(idx).map((comment, commentIdx)=>({
+        ...comment,
+        deleteStyle: this.deleteCommentButtonStyle(this.canDeleteComment(comment)),
+        onDelete: ()=>this.deleteComment(idx, commentIdx)
+      }));
+      const draftNote = this.state.draftNotes[idx] || '';
+      const commentDisabled = !draftNote.trim();
+
+      const rowStyle = {
+        display:'grid', gridTemplateColumns:'72px minmax(0,1fr)',
+        borderBottom: isLastRow ? 'none' : '1px solid rgba(35,68,150,.12)',
+        background: isKeep ? 'rgba(8,173,189,.045)' : isAmend ? 'rgba(35,68,150,.025)' : '#fff',
+        boxShadow: isKeep ? 'inset 3px 0 0 #08ADBD' : 'none',
+        opacity: 1,
+        transition:'background .25s ease, opacity .25s ease, box-shadow .25s ease'
+      };
+      const numStyle = {
+        display:'flex', alignItems:'flex-start', justifyContent:'center', paddingTop:'30px',
+        fontFamily:"'Instrument Serif',Georgia,serif", fontWeight:400, fontSize:'30px',
+        fontVariantNumeric:'tabular-nums', lineHeight:1,
+        color: isKeep ? '#234496' : 'rgba(17,24,39,.62)',
+        background: isKeep ? 'rgba(8,173,189,.06)' : '#FAF8F3',
+        borderRight:'1px solid rgba(35,68,150,.1)', transition:'all .25s ease'
+      };
+      const chipStyle = {
+        display: it.recommended ? 'inline-flex' : 'none', alignItems:'center',
+        borderRadius:'100px', padding:'4px 10px', background:'rgba(8,173,189,.12)', color:'#234496',
+        fontWeight:700, fontSize:'10px', letterSpacing:'.08em', textTransform:'uppercase', whiteSpace:'nowrap'
+      };
+      const st = v ? STATUS[v] : null;
+      const statusStyle = {
+        display: v ? 'inline-flex' : 'none', alignItems:'center',
+        borderRadius:'100px', padding:'4px 11px',
+        background: st ? st.bg : 'transparent', color: st ? st.color : 'transparent',
+        fontWeight:700, fontSize:'10px', letterSpacing:'.1em', textTransform:'uppercase', whiteSpace:'nowrap'
+      };
+      const nameStyle = {
+        fontFamily:"'Instrument Serif',Georgia,serif", fontWeight:400,
+        fontSize:'clamp(26px,3vw,34px)', lineHeight:1.08, letterSpacing:'-.005em',
+        marginTop:'10px', color: '#234496',
+        textDecoration: isCut ? 'line-through' : 'none', textDecorationThickness:'1px'
+      };
+      const noteWrapStyle = { maxHeight: v ? '1400px' : '0', overflow:'hidden', transition:'max-height .35s ease' };
+      const commentsWrapStyle = { display: comments.length ? 'block' : 'none' };
+      const tagRowStyle = { display:(it.recommended||v) ? 'flex' : 'none', alignItems:'center', gap:'10px', flexWrap:'wrap', marginBottom:'2px' };
+
+      return {
+        num: it.n, name: it.name, essence: it.essence, desc: it.desc,
+        draftNote, comments, commentDisabled,
+        rowStyle, numStyle, chipStyle, statusStyle, nameStyle, noteWrapStyle, commentsWrapStyle, tagRowStyle,
+        statusLabel: st ? ('\u25CF\u2009' + st.label) : '',
+        notePlaceholder: isKeep ? 'Any notes on this one? (optional)' : isCut ? 'Anything we should know? (optional)' : 'What would you change?',
+        keepStyle: this.segStyle(isKeep,'keep'),
+        amendStyle: this.segStyle(isAmend,'amend'),
+        cutStyle: this.segStyle(isCut,'cut'),
+        addCommentStyle: this.commentButtonStyle(commentDisabled),
+        segHover: { borderColor:'#08ADBD', background:'rgba(8,173,189,.06)' },
+        onKeep: ()=>this.setVerdict(idx,'keep'),
+        onAmend: ()=>this.setVerdict(idx,'amend'),
+        onCut: ()=>this.setVerdict(idx,'cut'),
+        onDraftNote: (e)=>this.setDraftNote(idx, e.target.value),
+        onAddComment: ()=>this.addComment(idx)
+      };
+    });
+
+    const recList = this.ITEMS.filter(it=>it.recommended).map(it=>({ num: it.n, name: it.name, why: it.why }));
+
+    const pending = C.total - C.done;
+    const tally = C.k + ' lit · ' + C.a + ' to adjust · ' + C.c + ' not now' + (pending ? '  ·  ' + pending + ' to go' : '  ·  all set');
+
+    const progressStyle = {
+      width: (C.done / C.total * 100) + '%', height:'100%', background:'#08ADBD',
+      boxShadow:'0 0 10px rgba(8,173,189,.8)', transition:'width .3s ease'
+    };
+
+    const sendDisabled = C.done === 0;
+    const sendStyle = {
+      minHeight:'44px', borderRadius:'9px', padding:'11px 20px',
+      fontWeight:700, fontSize:'12px', letterSpacing:'.04em', textTransform:'uppercase',
+      border: sendDisabled ? '1px solid rgba(255,255,255,.78)' : '1px solid #fff',
+      background: sendDisabled ? 'rgba(255,255,255,.72)' : '#fff',
+      color: '#234496',
+      cursor: sendDisabled ? 'not-allowed' : 'pointer',
+      boxShadow: sendDisabled ? 'none' : '0 8px 22px -8px rgba(0,0,0,.35)', transition:'all .15s'
+    };
+    const budgetEntries = this.normalizeBudgetEntries(this.state.budgetEntries, '').map((entry, entryIdx)=>({
+      ...entry,
+      deleteStyle: this.deleteCommentButtonStyle(this.canDeleteComment(entry)),
+      onDelete: ()=>this.deleteBudgetEntry(entryIdx)
+    }));
+    const budgetEntryDisabled = !this.budgetAmount(this.state.budgetDraft);
+    const budgetEntryButtonStyle = this.commentButtonStyle(budgetEntryDisabled);
+    const budgetEntriesWrapStyle = { display: budgetEntries.length ? 'block' : 'none' };
+
+    const toastStyle = {
+      position:'fixed', bottom:'84px', left:'50%',
+      transform: this.state.toastOn ? 'translateX(-50%) translateY(0)' : 'translateX(-50%) translateY(14px)',
+      background:'#234496', color:'#fff', fontFamily:"'Schibsted Grotesk',sans-serif", fontSize:'13.5px',
+      padding:'12px 20px', borderRadius:'100px', opacity: this.state.toastOn ? 1 : 0, pointerEvents:'none',
+      transition:'all .3s', zIndex:60, boxShadow:'0 16px 40px -10px rgba(35,68,150,.5)'
+    };
+
+    return {
+      rows, recList, tally, progressStyle, sendDisabled, sendStyle, toastStyle, toast: this.state.toast,
+      fieldFocus, advisorName: this.advisor(), company: this.company(),
+      stakeholderName: this.state.stakeholderName, budgetDraft: this.state.budgetDraft,
+      budgetEntries, budgetEntriesWrapStyle, budgetEntryDisabled, budgetEntryButtonStyle,
+      recBtnHover: { background:'rgba(255,255,255,.2)' },
+      addCommentHover: { background:'#234496' },
+      deleteCommentHover: { borderColor:'#234496', color:'#234496', background:'rgba(35,68,150,.06)' },
+      copyHover: { borderColor:'#fff', color:'#fff' },
+      applyRec: ()=>this.applyRec(),
+      setListRef: (el)=>{ this.listEl = el; },
+      onStakeholderName: (e)=>this.setStakeholderName(e.target.value),
+      onBudgetDraft: (e)=>this.setBudgetDraft(e.target.value),
+      onAddBudgetEntry: ()=>this.addBudgetEntry(),
+      onCopy: ()=>this.onCopyClick(),
+      onSend: ()=>this.onSendClick()
+    };
+  }
+}
+</script>
+</body>
+</html>
