@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "release": "v3.0",
+  "sourceCommit": "6be99b0371883be5b0ccae0af77e05ce3bca2bda",
+  "builtAt": "2026-07-14T15:45:21.743Z",
+  "deploymentMode": "domain-neutral",
+  "siteUrl": null,
+  "locales": [
+    {
+      "language": "en-CA",
+      "path": "/",
+      "url": null
+    },
+    {
+      "language": "fr-CA",
+      "path": "/fr/",
+      "url": null
+    }
+  ],
+  "runtime": {
+    "node": "v26.0.0",
+    "react": "^19.2.7",
+    "vite": "^8.1.1"
+  },
+  "integrity": {
+    "scannerMd5": "3a917f30ec07e60e7d5db0e884a2b301",
+    "portfolioAssetCount": 0,
+    "files": [
+      {
+        "path": "_headers",
+        "bytes": 402,
+        "sha256": "12d9c83dfeb885a2136105288d158a71a322583eea8e9e748e2a4e88bba364c7"
+      },
+      {
+        "path": "assets/main-B7USkPCb.js",
+        "bytes": 338802,
+        "sha256": "53cb86cfdf463bb70c33788cf4d872a2f6f3a9550cec29904d398170869dbc22"
+      },
+      {
+        "path": "assets/main-CGfuLCuF.css",
+        "bytes": 69028,
+        "sha256": "b91fde0585f4dc2c996977fb36e74dda1b725eef10a0d4ef41051387e9869df3"
+      },
+      {
+        "path": "favicon.svg",
+        "bytes": 673,
+        "sha256": "3b8792a7fe9ab3616bc6329b49b269c7b963051fc689dea6c366cd0bdbf3d82b"
+      },
+      {
+        "path": "fonts/fraunces-latin.woff2",
+        "bytes": 67388,
+        "sha256": "48282a415ec22e31beaf0a0666e6fae0c8cbddcd0b1f6e729f27c3ade8a64e43"
+      },
+      {
+        "path": "fonts/inter-latin.woff2",
+        "bytes": 48432,
+        "sha256": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4"
+      },
+      {
+        "path": "fonts/jetbrainsmono-latin.woff2",
+        "bytes": 31340,
+        "sha256": "2c32b9b3ee358c119e210f6f5195f9bd34894d78a785ff2e95d60e718e400af4"
+      },
+      {
+        "path": "fr/index.html",
+        "bytes": 1788,
+        "sha256": "a0343e4486da95f8cf71a5c9155702b3097e9edfb3fe0120afe1292106eb356a"
+      },
+      {
+        "path": "index.html",
+        "bytes": 2019,
+        "sha256": "822736e9e662805ca0a2ee28c4df2faff21e4305f6b4256027e9e9f2c6fa5ee4"
+      },
+      {
+        "path": "llms.txt",
+        "bytes": 2002,
+        "sha256": "3ca7c7d1464d076dd7c82b88207319fb7144c4ad9142292435eb135c368c771d"
+      },
+      {
+        "path": "og.png",
+        "bytes": 58565,
+        "sha256": "27ef427a616fb9f063706f72417ab666a18878c85d675528040f9905590c1460"
+      },
+      {
+        "path": "robots.txt",
+        "bytes": 165,
+        "sha256": "fee7288a3348dad3a000f79f926c58d172ace7f6df5ca343156351833d672c27"
+      }
+    ]
+  }
+}

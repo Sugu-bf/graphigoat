@@ -1,0 +1,27 @@
+# GraphiGOAT
+
+> GraphiGOAT builds bilingual clarity systems for Canada-ready brands, technical teams and founders: packaging, decks, documents and digital experiences built to be understood, approved and chosen.
+
+> GraphiGOAT conçoit des systèmes de clarté bilingues pour les marques destinées au marché canadien, les équipes techniques et les fondateurs : emballages, présentations, documents et expériences numériques pensés pour être compris, approuvés et choisis.
+
+One-page studio site for Mohamed N., a Top Rated Plus Upwork designer (100% Job Success, 68 jobs, 1,352 hours) specializing in bilingual EN/FR packaging, decks, technical documents and clarity systems for the Canadian market. The thesis: the market chooses the clearest value it can trust.
+
+Site bilingue EN-CA / FR-CA de Mohamed N., designer Top Rated Plus sur Upwork (taux de réussite de 100 %, 68 mandats, 1 352 heures), spécialisé en emballage bilingue EN/FR, présentations, documents techniques et systèmes de clarté pour le marché canadien. Version française : [/fr/](/fr/).
+
+## Free tools (no email gate)
+
+- [Clarity Leak Scanner](/#scanner): a 9-question check, about 2 minutes, clarity score out of 100 shown instantly; covers trust, conversion, bilingual (EN/FR) readiness and AI/search clarity
+- [Brand Clarity Scorecard](/#resources): 12 statements, about 3 minutes, section scores (offer, proof, visual hierarchy, AI/search) shown instantly
+
+## Outils gratuits en français
+
+- [Diagnostic Clarity Leak](/fr/#scanner) : 9 questions, environ 2 minutes, pointage de clarté immédiat sur 100
+- [Bilan de clarté de marque](/fr/#resources) : 12 énoncés, environ 3 minutes, résultats immédiats par section
+
+## Services
+
+- [Four offers, from one-file rescue to whole-system consistency](/#services): Clarity Scan (diagnosis), Design Rescue (one file, in 48 hours), Conversion Asset Sprint (one asset, rebuilt), Market-Ready System (every channel, consistent)
+
+## Contact
+
+- Email: hello@graphigoat.com
