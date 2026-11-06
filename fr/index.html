@@ -1,35 +1,469 @@
 <!doctype html>
 <html lang="fr-CA">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="GraphiGOAT conçoit des systèmes de clarté bilingues pour le marché canadien : emballages, présentations, documents et expériences numériques pensés pour être compris, approuvés et choisis." />
-    <meta name="robots" content="index,follow,max-image-preview:large" />
-    <meta property="og:title" content="GraphiGOAT | Le moteur de clarté" />
-    <meta property="og:description" content="Le marché choisit la valeur la plus claire. Celle à laquelle il peut se fier. Des systèmes de clarté bilingues pour les produits, les documents et les décisions à fort enjeu." />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>GraphiGOAT · Sites web pour agences de représentants en éclairage</title>
+    <meta name="description" content="Sites web pour agences de représentants en éclairage, aux États-Unis et au Canada. Une maquette gratuite de votre nouvelle page d'accueil, faite à partir de votre site actuel. Rien à préparer. Elle est à vous." />
+    <meta name="theme-color" content="#f2f0eb" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://graphigoat.com/fr/" />
+    <link rel="alternate" hreflang="en" href="https://graphigoat.com/" />
+    <link rel="alternate" hreflang="fr-CA" href="https://graphigoat.com/fr/" />
+    <link rel="alternate" hreflang="x-default" href="https://graphigoat.com/" />
+    <link rel="preload" href="/brand/emblem.svg" as="image" type="image/svg+xml" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="GraphiGOAT" />
+    <meta property="og:title" content="GraphiGOAT · Sites web pour agences de représentants en éclairage" />
+    <meta property="og:description" content="Une maquette gratuite de votre nouvelle page d'accueil, faite à partir de votre site actuel. Rien à préparer. Elle est à vous." />
+    <meta property="og:image" content="https://graphigoat.com/og-fr.jpg" />
+    <meta property="og:url" content="https://graphigoat.com/fr/" />
     <meta property="og:locale" content="fr_CA" />
-    <meta property="og:locale:alternate" content="en_CA" />
+    <meta property="og:locale:alternate" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="theme-color" content="#1c2c4c" />
-    <meta name="color-scheme" content="light" />
-    <link
-      rel="preload"
-      href="/fonts/fraunces-latin.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <title>GraphiGOAT | Le moteur de clarté</title>
-    <script type="module" crossorigin src="/assets/main-B7USkPCb.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/main-CGfuLCuF.css">
-    <link rel="alternate" hreflang="en-CA" href="/">
-    <link rel="alternate" hreflang="fr-CA" href="/fr/">
-    <link rel="alternate" hreflang="x-default" href="/">
+    <script>
+      document.documentElement.classList.add('fx')
+      try {
+        if (localStorage.getItem('lf-motion') === 'reduce') document.documentElement.classList.add('is-reduced')
+        var q = new URLSearchParams(location.search).get('via')
+        if (q === 'upwork') sessionStorage.setItem('gg-via', 'upwork')
+        if (q === 'direct') sessionStorage.removeItem('gg-via')
+        if (sessionStorage.getItem('gg-via') === 'upwork') document.documentElement.classList.add('via-upwork')
+      } catch (e) {}
+    </script>
+    <script type="module" src="/src/main.ts"></script>
   </head>
   <body>
-    <div id="root"></div>
+    <a class="skip-link" href="#content">Aller au contenu</a>
+
+    <header class="site-header" data-header data-scroll-offset>
+      <a class="brand" href="#top" aria-label="GraphiGOAT, retour en haut">
+        <img class="brand__emblem" src="/brand/emblem.svg" width="529" height="798" alt="" />
+        <img class="brand__word" src="/brand/wordmark.svg" width="1046" height="194" alt="GraphiGOAT" />
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#mockup">La maquette</a>
+        <a href="#work">Réalisations</a>
+        <a href="#proof">Preuves</a>
+        <a href="#how">Comment ça marche</a>
+        <a href="#price">Prix</a>
+      </nav>
+      <div class="header__end">
+        <a class="lang" href="/" hreflang="en" lang="en">EN</a>
+        <a class="pill pill--small" href="#get"><span class="pill__dot" aria-hidden="true"></span>Maquette gratuite</a>
+      </div>
+    </header>
+
+    <main id="content" tabindex="-1">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero__light" aria-hidden="true">
+          <div class="hero__beam" data-beam></div>
+          <div class="hero__pool"></div>
+        </div>
+
+        <div class="hero__copy">
+          <p class="eyebrow" data-reveal="fade" data-reveal-on="load">Sites web pour agences de représentants en éclairage · É.-U. et Canada</p>
+          <h1 id="hero-title" class="hero__title">
+            <span class="hero__line" data-reveal="lines" data-reveal-on="load">Votre nouvel</span>
+            <span class="hero__line" data-reveal="lines" data-reveal-on="load" data-reveal-delay="0.08">accueil,</span>
+            <span class="sr-only"> offert.</span>
+          </h1>
+        </div>
+
+        <div class="hero__side">
+          <p class="badge-check" data-reveal="fade" data-reveal-on="load" data-reveal-delay="0.2">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" /></svg>
+            NSL et Magic Lite sont des clients
+          </p>
+          <p class="hero__onme" aria-hidden="true" data-reveal="lines" data-reveal-on="load" data-reveal-delay="0.1">Offert.</p>
+          <p class="hero__sub" data-reveal="fade" data-reveal-on="load" data-reveal-delay="0.3">
+            J'esquisse le premier écran de votre nouvelle page d'accueil à partir de ce qui est déjà sur votre site. Si
+            vous l'aimez, on part de là. Sinon, aucun problème.
+          </p>
+          <div class="hero__cta" data-reveal="fade" data-reveal-on="load" data-reveal-delay="0.4">
+            <a class="pill" href="#get"><span class="pill__dot" aria-hidden="true"></span>Recevoir ma maquette</a>
+            <p class="hero__reply">Vous avez reçu mon courriel? Répondez « oui ».</p>
+          </div>
+        </div>
+
+        <div class="stage" data-stage>
+          <div class="badge" data-badge>
+            <div class="badge__body" data-badge-body>
+              <img class="badge__face" src="/brand/emblem.svg" width="529" height="798" alt="L'emblème de GraphiGOAT, éclairé par le haut" fetchpriority="high" />
+              <span class="badge__sheen" aria-hidden="true"></span>
+            </div>
+            <span class="badge__shadow" aria-hidden="true"></span>
+          </div>
+
+          <ul class="specs" role="list" aria-label="L'offre en bref">
+            <li class="spec spec--a" data-reveal="rise" data-reveal-on="load" data-reveal-delay="0.5">
+              <span class="spec__label">Maquette</span>
+              <span class="spec__value">Gratuite</span>
+              <span class="spec__text">Le premier écran de votre nouvelle page d'accueil.</span>
+              <svg class="spec__glyph" viewBox="0 0 64 28" aria-hidden="true"><rect x="1" y="1" width="62" height="26" rx="3" /><path d="M1 7h62M6 13h22M6 18h14M38 12h20v10H38z" /></svg>
+            </li>
+            <li class="spec spec--b" data-reveal="rise" data-reveal-on="load" data-reveal-delay="0.6">
+              <span class="spec__label">À préparer</span>
+              <span class="spec__value">0</span>
+              <span class="spec__text">Je pars de votre site actuel.</span>
+              <svg class="spec__glyph" viewBox="0 0 64 28" aria-hidden="true"><path d="M2 22h8l6-14 8 18 7-12 6 6h25" /></svg>
+            </li>
+            <li class="spec spec--c" data-reveal="rise" data-reveal-on="load" data-reveal-delay="0.7">
+              <span class="spec__label">Délai</span>
+              <span class="spec__value">48 h</span>
+              <span class="spec__text">De votre « oui » à votre boîte de réception.</span>
+              <svg class="spec__glyph" viewBox="0 0 64 28" aria-hidden="true"><path d="M2 20h60" /><path class="is-on" d="M2 20h44" /><circle cx="46" cy="20" r="3" /></svg>
+            </li>
+            <li class="spec spec--d" data-reveal="rise" data-reveal-on="load" data-reveal-delay="0.8">
+              <span class="spec__label">Si c'est non</span>
+              <span class="spec__value">À vous</span>
+              <span class="spec__text">Vous gardez la maquette.</span>
+              <svg class="spec__glyph" viewBox="0 0 64 28" aria-hidden="true"><circle cx="14" cy="14" r="8" /><path d="M22 14h36M50 14v7M56 14v5" /></svg>
+            </li>
+          </ul>
+        </div>
+
+        <p class="hero__scroll" aria-hidden="true"><span></span>Défiler</p>
+      </section>
+
+      <section class="mockup section-pad" id="mockup" aria-labelledby="mockup-title">
+        <div class="section-head">
+          <p class="label">01 · Ce que vous recevez</p>
+          <h2 id="mockup-title" class="h2" data-reveal="lines">Voici ce qui arrive dans votre boîte.</h2>
+          <p class="lead" data-reveal="fade">
+            Le premier écran de votre nouvelle page d'accueil, sur ordinateur et sur mobile, fait avec votre propre
+            contenu : vos lignes, votre territoire, vos coordonnées.
+          </p>
+        </div>
+
+        <div class="devices" data-reveal="rise">
+          <p class="tag"><span class="tag__dot" aria-hidden="true"></span>Exemple. Votre maquette utilise votre propre contenu et reste privée.</p>
+
+          <div class="devices__stage">
+            <figure class="laptop" aria-label="Exemple de maquette : le premier écran de la page d'accueil d'une agence de représentants en éclairage">
+              <div class="laptop__screen">
+                <div class="mini" aria-hidden="true">
+                  <div class="mini__bar">
+                    <span class="mini__logo"><i></i>Votre agence</span>
+                    <span class="mini__nav"><b>Lignes</b><b>Fiches techniques</b><b>Projets</b><b>Équipe</b><b>Contact</b></span>
+                    <span class="mini__btn">Démarrer un projet</span>
+                  </div>
+                  <div class="mini__hero">
+                    <div class="mini__copy">
+                      <span class="mini__kicker">Éclairage architectural · Votre territoire</span>
+                      <span class="mini__title">Toutes nos lignes. Chaque fiche, à une recherche près.</span>
+                      <span class="mini__search"><i></i>Trouver une fiche ou un fichier IES<em>Chercher</em></span>
+                    </div>
+                    <div class="mini__sheet">
+                      <span class="mini__sheet-head">Fiche · IES · BIM</span>
+                      <svg viewBox="-100 -6 200 112"><path class="g" d="M-90 0 A90 90 0 0 0 90 0 M-60 0 A60 60 0 0 0 60 0 M-30 0 A30 30 0 0 0 30 0 M0 0 L0 92 M0 0 L64 64 M0 0 L-64 64" /><path class="c" d="M0 0 C 18 30, 22 70, 0 88 C -22 70, -18 30, 0 0Z" /><path class="d" d="M0 0 C 40 20, 52 52, 0 66 C -52 52, -40 20, 0 0Z" /></svg>
+                      <span class="mini__sheet-row"><b>Télécharger</b><i>PDF</i><i>IES</i><i>BIM</i></span>
+                    </div>
+                  </div>
+                  <div class="mini__lines">
+                    <span class="mini__lines-label">Nos lignes</span>
+                    <span class="mini__logos"><b class="w1">LIGNE A</b><b class="w2">Ligne B</b><b class="w3">LIGNE·C</b><b class="w4">ligne d</b><b class="w5">LIGNE E</b><b class="w6">Ligne F</b><b class="w7">LIGNE G</b><b class="w8">ligne h</b></span>
+                  </div>
+                </div>
+              </div>
+              <div class="laptop__base" aria-hidden="true"></div>
+            </figure>
+
+            <figure class="phone" aria-label="Le même premier écran sur un téléphone">
+              <div class="phone__screen">
+                <div class="mini mini--phone" aria-hidden="true">
+                  <div class="mini__bar"><span class="mini__logo"><i></i>Votre agence</span><span class="mini__burger"></span></div>
+                  <span class="mini__kicker">Éclairage architectural</span>
+                  <span class="mini__title">Toutes nos lignes. Chaque fiche, à une recherche près.</span>
+                  <span class="mini__search"><i></i>Trouver une fiche</span>
+                  <span class="mini__logos"><b class="w1">LIGNE A</b><b class="w2">Ligne B</b><b class="w3">LIGNE·C</b><b class="w4">ligne d</b></span>
+                  <span class="mini__btn mini__btn--wide">Démarrer un projet</span>
+                </div>
+              </div>
+            </figure>
+          </div>
+
+          <ul class="callouts" role="list">
+            <li><span class="callouts__k">Carte de lignes</span>Toutes vos lignes, lisibles d'un coup d'œil.</li>
+            <li><span class="callouts__k">Recherche de fiches</span>Fiches techniques et fichiers IES, à une recherche près.</li>
+            <li><span class="callouts__k">Demandes de projets</span>Un bouton clair, les bonnes questions.</li>
+            <li><span class="callouts__k">EN · FR-CA</span>En français canadien, si votre agence le souhaite.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="work" id="work" aria-labelledby="work-title">
+        <div class="section-head work__head">
+          <p class="label">02 · Livré</p>
+          <h2 id="work-title" class="h2" data-reveal="lines">Après la maquette, je le construis. Comme ceux-ci.</h2>
+          <p class="work__meta">3 sites clients · 1 concept · 0 gabarit</p>
+        </div>
+
+        <div class="pano" data-effect="pano" data-effect-media="(min-width: 900px)">
+          <div class="pano__stage">
+            <div class="pano__light" aria-hidden="true"></div>
+            <div class="pano__ring">
+              <article class="wcard" aria-labelledby="wcard-kaliva">
+                <figure class="wcard__media" data-effect="work-media">
+                  <img src="/media/work/kaliva/poster.webp" srcset="/media/work/kaliva/poster.webp 1440w, /media/work/kaliva/poster@2x.webp 2560w" sizes="(min-width: 900px) 44vw, 92vw" alt="Page d'accueil de Kaliva : un relief 3D de la Suisse, avec une loupe qui plonge dans la carte." loading="lazy" decoding="async" width="1440" height="810" />
+                  <video muted loop playsinline preload="none" data-src="/media/work/kaliva/loop.mp4" data-src-small="/media/work/kaliva/loop-small.mp4" aria-hidden="true" tabindex="-1"></video>
+                </figure>
+                <div class="wcard__body">
+                  <p class="wcard__status"><i class="dot dot--live"></i>En ligne</p>
+                  <h3 class="wcard__name" id="wcard-kaliva">Kaliva</h3>
+                  <button class="wcard__open" type="button" data-sheet-open="kaliva">Fiche<span class="sr-only"> : Kaliva</span> <span aria-hidden="true">↗</span></button>
+                  <p class="wcard__line">Un club immobilier privé hors marché en Suisse : site public, espace membres, documents sécurisés pour les banques.</p>
+                  <p class="wcard__proves"><span>Prouve</span>Un site qui fait des affaires. Les membres y font leurs offres.</p>
+                </div>
+              </article>
+              <article class="wcard" aria-labelledby="wcard-zyllow">
+                <figure class="wcard__media" data-effect="work-media">
+                  <img src="/media/work/zyllow/poster.webp" srcset="/media/work/zyllow/poster.webp 1440w, /media/work/zyllow/poster@2x.webp 2560w" sizes="(min-width: 900px) 44vw, 92vw" alt="Le titre de Zyllow : « Réimprimez » est barré au marqueur rouge, « Modifiez » est écrit à la main, et le téléphone à côté met ses prix à jour." loading="lazy" decoding="async" width="1440" height="810" />
+                  <video muted loop playsinline preload="none" data-src="/media/work/zyllow/loop.mp4" data-src-small="/media/work/zyllow/loop-small.mp4" aria-hidden="true" tabindex="-1"></video>
+                </figure>
+                <div class="wcard__body">
+                  <p class="wcard__status"><i class="dot dot--soon"></i>Avant lancement</p>
+                  <h3 class="wcard__name" id="wcard-zyllow">Zyllow</h3>
+                  <button class="wcard__open" type="button" data-sheet-open="zyllow">Fiche<span class="sr-only"> : Zyllow</span> <span aria-hidden="true">↗</span></button>
+                  <p class="wcard__line">Des menus numériques pour les restaurants du Bénin. Un titre le dit, le téléphone à côté le montre, en direct.</p>
+                  <p class="wcard__proves"><span>Prouve</span>Clair au premier coup d'œil. Toute l'offre tient en un titre.</p>
+                </div>
+              </article>
+              <article class="wcard" aria-labelledby="wcard-nassa">
+                <figure class="wcard__media" data-effect="work-media">
+                  <img src="/media/work/nassa/poster.webp" srcset="/media/work/nassa/poster.webp 1440w, /media/work/nassa/poster@2x.webp 2560w" sizes="(min-width: 900px) 44vw, 92vw" alt="Nassa Energy Plus : une sculpture d'huile dorée bouge sous la lumière du pointeur, à côté du titre « Huiles. Graisses. Pièces. »" loading="lazy" decoding="async" width="1440" height="810" />
+                  <video muted loop playsinline preload="none" data-src="/media/work/nassa/loop.mp4" data-src-small="/media/work/nassa/loop-small.mp4" aria-hidden="true" tabindex="-1"></video>
+                </figure>
+                <div class="wcard__body">
+                  <p class="wcard__status"><i class="dot dot--done"></i>Livré</p>
+                  <h3 class="wcard__name" id="wcard-nassa">Nassa Energy Plus</h3>
+                  <button class="wcard__open" type="button" data-sheet-open="nassa">Fiche<span class="sr-only"> : Nassa Energy Plus</span> <span aria-hidden="true">↗</span></button>
+                  <p class="wcard__line">Lubrifiants et pièces pour flottes et chantiers à Abidjan. Les devis arrivent par un formulaire WhatsApp.</p>
+                  <p class="wcard__proves"><span>Prouve</span>Des demandes qualifiées. On choisit des options au lieu de faire face à un message vide.</p>
+                </div>
+              </article>
+              <article class="wcard" aria-labelledby="wcard-clinic">
+                <figure class="wcard__media" data-effect="work-media">
+                  <img src="/media/work/clinic/poster.webp" sizes="(min-width: 900px) 44vw, 92vw" alt="Concept de clinique dentaire : une page d'accueil calme, avec le titre « Votre situation mérite d'être comprise avant d'être traitée. »" loading="lazy" decoding="async" width="1440" height="810" />
+                  <video muted loop playsinline preload="none" data-src="/media/work/clinic/loop.mp4" data-src-small="/media/work/clinic/loop-small.mp4" aria-hidden="true" tabindex="-1"></video>
+                </figure>
+                <div class="wcard__body">
+                  <p class="wcard__status"><i class="dot dot--concept"></i>Concept</p>
+                  <h3 class="wcard__name" id="wcard-clinic">Une clinique dentaire</h3>
+                  <button class="wcard__open" type="button" data-sheet-open="clinic">Fiche<span class="sr-only"> : concept de clinique dentaire</span> <span aria-hidden="true">↗</span></button>
+                  <p class="wcard__line">Un concept, pas un client. Chaque fait de la page porte la date de sa vérification.</p>
+                  <p class="wcard__proves"><span>Montre</span>Des informations datées. Rien ne vieillit sans qu'on le voie.</p>
+                </div>
+              </article>
+            </div>
+            <ol class="pano__index" aria-label="Projets">
+              <li><button type="button">Kaliva</button></li>
+              <li><button type="button">Zyllow</button></li>
+              <li><button type="button">Nassa Energy Plus</button></li>
+              <li><button type="button">Clinique dentaire</button></li>
+            </ol>
+            <p class="pano__hint" aria-hidden="true"><span></span>Défilez pour faire tourner la salle</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="why section-pad" id="why" aria-labelledby="why-title">
+        <div class="section-head">
+          <p class="label">03 · Pourquoi ça rapporte</p>
+          <h2 id="why-title" class="h2" data-reveal="lines">Pensé pour la façon dont vous vendez.</h2>
+        </div>
+        <ol class="stakes" role="list" data-reveal-group>
+          <li class="stake" data-reveal="rise">
+            <span class="stake__n">01</span>
+            <h3>Gagnez de nouvelles lignes.</h3>
+            <p>Avant de vous confier une ligne, un manufacturier vous cherche en ligne. Votre site devrait vendre votre agence aussi bien que vous.</p>
+          </li>
+          <li class="stake" data-reveal="rise">
+            <span class="stake__n">02</span>
+            <h3>Faites prescrire vos lignes.</h3>
+            <p>Fiches techniques et fichiers IES à un clic de votre carte de lignes, tirés des documents officiels de chaque manufacturier.</p>
+          </li>
+          <li class="stake" data-reveal="rise">
+            <span class="stake__n">03</span>
+            <h3>Recevez de vraies demandes.</h3>
+            <p>Un bouton clair et un court formulaire qui pose les questions qu'il vous faut pour soumissionner. En anglais, et en français si vous le voulez.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="proof section-pad" id="proof" aria-labelledby="proof-title">
+        <div class="section-head">
+          <p class="label">04 · Preuves</p>
+          <h2 id="proof-title" class="h2" data-reveal="lines">1 107 heures dans la documentation d'éclairage.</h2>
+        </div>
+
+        <div class="proof__grid">
+          <article class="card card--hours" data-reveal="rise">
+            <p class="card__label">Magic Lite · documentation technique</p>
+            <p class="card__big">1 107<span>h</span></p>
+            <p class="card__text">Notices de luminaires, de mai 2024 à décembre 2025. Note de 5 sur 5. Réembauché en 2026.</p>
+            <div class="ring" style="--p: 82" role="img" aria-label="82 % de mes heures sur Upwork ont porté sur l'éclairage">
+              <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="ring__track" cx="60" cy="60" r="52" /><circle class="ring__bar" cx="60" cy="60" r="52" pathLength="100" /></svg>
+              <span class="ring__value">82 %</span>
+              <span class="ring__caption">de mes heures Upwork, en éclairage</span>
+            </div>
+          </article>
+
+          <figure class="card card--quote" data-reveal="rise">
+            <blockquote lang="en">
+              <p>“He is a clear and reliable communicator, delivers excellent work, and consistently understands both creative and technical requirements.”</p>
+            </blockquote>
+            <figcaption>Magic Lite · avis sur Upwork, en anglais</figcaption>
+          </figure>
+
+          <article class="card card--clients" data-reveal="rise">
+            <p class="card__label">Clients</p>
+            <p class="card__names">NSL<br />Magic Lite</p>
+            <p class="card__text">Deux fabricants d'éclairage. Leurs représentants lisent peut-être ceci.</p>
+          </article>
+
+          <dl class="card card--stats" data-reveal="rise">
+            <div><dt>Upwork</dt><dd lang="en">Top Rated</dd></div>
+            <div><dt>Contrats</dt><dd>77</dd></div>
+            <div><dt>Avis</dt><dd>56</dd></div>
+            <div><dt>Heures</dt><dd>1 351</dd></div>
+          </dl>
+        </div>
+        <p class="note">Chiffres lus sur Upwork le 4 novembre 2026.</p>
+      </section>
+
+      <section class="how section-pad" id="how" aria-labelledby="how-title">
+        <div class="section-head">
+          <p class="label">05 · Comment ça marche</p>
+          <h2 id="how-title" class="h2" data-reveal="lines">Trois étapes. Une seule pour vous.</h2>
+        </div>
+        <ol class="steps" role="list" data-reveal-group>
+          <li class="step" data-reveal="rise">
+            <span class="step__n">01 · Vous</span>
+            <h3>Répondez « oui ».</h3>
+            <p>Ou envoyez votre site avec le formulaire plus bas. C'est tout ce qu'il me faut.</p>
+          </li>
+          <li class="step" data-reveal="rise">
+            <span class="step__n">02 · Moi</span>
+            <h3>Votre maquette, sous 48 heures.</h3>
+            <p>Le premier écran de votre nouvelle page d'accueil, sur ordinateur et sur mobile, en image dans votre boîte de réception.</p>
+          </li>
+          <li class="step" data-reveal="rise">
+            <span class="step__n">03 · Vous décidez</span>
+            <h3>On y va, ou vous la gardez.</h3>
+            <p>Si elle vous plaît, on définit votre site ensemble. Sinon, la maquette est à vous.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="price section-pad" id="price" aria-labelledby="price-title">
+        <div class="price__inner">
+          <p class="label">06 · Prix</p>
+          <h2 id="price-title" class="h2 price__title" data-reveal="lines">La portée suit votre budget. <em>La qualité, jamais.</em></h2>
+          <div class="price__text" data-reveal="fade">
+            <p>Dites-moi ce que vous voulez investir. On ajuste la portée en conséquence, par écrit, avant de commencer. Paiement par étapes.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="get section-pad" id="get" aria-labelledby="get-title">
+        <div class="get__inner">
+          <div class="get__head">
+            <p class="label">07 · Votre maquette gratuite</p>
+            <h2 id="get-title" class="h2" data-reveal="lines">Envoyez votre site. Je m'occupe du reste.</h2>
+            <p class="lead only-direct">Quatre champs, et c'est tout. Je réponds personnellement.</p>
+          </div>
+
+          <form class="form only-direct" name="contact-fr" method="POST" data-netlify="true" netlify-honeypot="company-url" data-form>
+            <input type="hidden" name="form-name" value="contact-fr" />
+            <p class="sr-only"><label>Laissez ce champ vide <input name="company-url" tabindex="-1" autocomplete="off" /></label></p>
+            <label class="field field--wide"><span>Votre site actuel</span><input name="website" type="url" inputmode="url" placeholder="https://" required /></label>
+            <label class="field"><span>Votre nom</span><input name="name" autocomplete="name" required /></label>
+            <label class="field"><span>Votre agence</span><input name="agency" autocomplete="organization" required /></label>
+            <label class="field field--wide"><span>Où dois-je envoyer la maquette?</span><input name="reply" type="email" autocomplete="email" placeholder="vous@agence.com" required /></label>
+            <label class="field field--wide"><span>Quelque chose à savoir? <i>(facultatif)</i></span><textarea name="message" rows="3"></textarea></label>
+            <div class="form__end">
+              <button class="pill" type="submit"><span class="pill__dot" aria-hidden="true"></span>Envoyez-moi ma maquette</button>
+              <p class="form__status" role="status" aria-live="polite" data-form-status></p>
+            </div>
+          </form>
+
+          <div class="upwork only-upwork">
+            <p>On se parle sur Upwork, alors restons-y.</p>
+            <a class="pill" href="https://www.upwork.com/freelancers/~01b85016879a5920ae" rel="noopener" target="_blank"><span class="pill__dot" aria-hidden="true"></span>M'écrire sur Upwork</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__brand">
+        <img class="site-footer__emblem" src="/brand/emblem.svg" width="529" height="798" alt="" loading="lazy" />
+        <div>
+          <img class="site-footer__word" src="/brand/wordmark.svg" width="1046" height="194" alt="GraphiGOAT" loading="lazy" />
+          <p class="site-footer__slogan">Gagner la ligne. Gagner la prescription. Gagner le projet.</p>
+        </div>
+      </div>
+      <div class="site-footer__base">
+        <span>Mohamed · GraphiGOAT</span>
+        <a class="only-direct" href="https://www.upwork.com/freelancers/~01b85016879a5920ae" rel="noopener" target="_blank">Profil Upwork</a>
+        <a href="/" hreflang="en" lang="en">English version</a>
+        <button class="motion-toggle" type="button" data-motion-toggle aria-pressed="false">Réduire les animations</button>
+        <span>© 2026 GraphiGOAT</span>
+      </div>
+    </footer>
+    <dialog class="sheet" id="sheet" aria-labelledby="sheet-title">
+      <div class="sheet__inner" data-sheet-body></div>
+      <form method="dialog" class="sheet__close"><button type="submit">Fermer</button></form>
+    </dialog>
+
+    <template id="sheet-kaliva">
+      <p class="sheet__kind">Fiche · 01 / 04</p>
+      <h2 class="sheet__title" id="sheet-title">Kaliva</h2>
+      <p class="sheet__line">Club immobilier privé hors marché, Suisse.</p>
+      <dl class="sheet__spec">
+        <div><dt>Statut</dt><dd>En ligne</dd></div>
+        <div><dt>Construit</dt><dd>Site public et club membres, une API, des liens sécurisés pour les banques, et une interface de gestion que l'équipe utilise en français</dd></div>
+        <div><dt>Signature</dt><dd>Un relief 3D de la Suisse, et une loupe qui plonge dans la carte</dd></div>
+        <div><dt>Mesuré</dt><dd class="sheet__num">147 tests côté serveur</dd></div>
+        <div class="is-rep"><dt>Pour votre agence</dt><dd>Carte de lignes, fiches techniques et demandes de projets peuvent vivre dans un seul site clair, géré par votre équipe.</dd></div>
+      </dl>
+    </template>
+    <template id="sheet-zyllow">
+      <p class="sheet__kind">Fiche · 02 / 04</p>
+      <h2 class="sheet__title" id="sheet-title">Zyllow</h2>
+      <p class="sheet__line">Menus à code QR pour restaurants, Parakou, Bénin.</p>
+      <dl class="sheet__spec">
+        <div><dt>Statut</dt><dd>Avant lancement</dd></div>
+        <div><dt>Construit</dt><dd>La page de présentation et son menu de démonstration en direct. La plateforme elle-même est développée par Biozira</dd></div>
+        <div><dt>Signature</dt><dd>Le titre raye une vieille habitude, et le téléphone à côté met ses prix à jour en direct</dd></div>
+        <div><dt>Mesuré</dt><dd class="sheet__num">Aucun décalage de mise en page, à chaque contrôle qualité</dd></div>
+        <div class="is-rep"><dt>Pour votre agence</dt><dd>Un seul titre dit ce que vous vendez. Le prescripteur comprend avant de défiler.</dd></div>
+      </dl>
+    </template>
+    <template id="sheet-nassa">
+      <p class="sheet__kind">Fiche · 03 / 04</p>
+      <h2 class="sheet__title" id="sheet-title">Nassa Energy Plus</h2>
+      <p class="sheet__line">Lubrifiants et pièces pour flottes, chantiers et ateliers, Abidjan, Côte d'Ivoire.</p>
+      <dl class="sheet__spec">
+        <div><dt>Statut</dt><dd>Livré</dd></div>
+        <div><dt>Construit</dt><dd>Une refonte de la page d'accueil, à partir d'un diagnostic de 8 freins à la conversion, et un formulaire de devis WhatsApp : des options à toucher au lieu de champs, avec un aperçu du message en direct</dd></div>
+        <div><dt>Signature</dt><dd>De l'huile vivante, dessinée en WebGL</dd></div>
+        <div><dt>Mesuré</dt><dd class="sheet__num">Image d'accueil de 8 Ko sur téléphone</dd></div>
+        <div class="is-rep"><dt>Pour votre agence</dt><dd>Les demandes arrivent qualifiées, comme devrait arriver une demande de projet pour vos lignes.</dd></div>
+      </dl>
+    </template>
+    <template id="sheet-clinic">
+      <p class="sheet__kind">Fiche · 04 / 04</p>
+      <h2 class="sheet__title" id="sheet-title">Une clinique dentaire</h2>
+      <p class="sheet__line">Dentisterie familiale, Burkina Faso. Concept, non commandé.</p>
+      <dl class="sheet__spec">
+        <div><dt>Statut</dt><dd>Concept · pas un client</dd></div>
+        <div><dt>Construit</dt><dd>Page d'accueil, guide de première visite et demande de rendez-vous, en prototype qui n'envoie aucune donnée</dd></div>
+        <div><dt>Signature</dt><dd>Chaque fait de la page porte la date de sa vérification</dd></div>
+        <div><dt>Mesuré</dt><dd class="sheet__num">73 tests de bout en bout sur 73 · page d'accueil de 245 Ko sur mobile · 0 violation d'accessibilité grave</dd></div>
+        <div class="is-rep"><dt>Pour votre agence</dt><dd>Des données techniques datées : aucune fiche périmée ne se retrouve dans une soumission.</dd></div>
+      </dl>
+    </template>
   </body>
 </html>

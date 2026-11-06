@@ -1,0 +1,7 @@
+node_modules
+dist
+qa
+.landing-forge-backup
+.DS_Store
+*.log
+.netlify

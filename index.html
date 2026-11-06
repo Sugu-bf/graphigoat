@@ -1,39 +1,491 @@
 <!doctype html>
-<html lang="en-CA">
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="GraphiGOAT builds bilingual clarity systems for Canada-ready brands, technical teams and founders: packaging, decks, documents and digital experiences built to be understood, approved and chosen." />
-    <meta name="robots" content="index,follow,max-image-preview:large" />
-    <meta property="og:title" content="GraphiGOAT | The Clarity Engine" />
-    <meta property="og:description" content="The market chooses the clearest value it can trust. Bilingual clarity systems for high-stakes products, documents and decisions." />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>GraphiGOAT · Websites for lighting rep agencies</title>
+    <meta name="description" content="Websites for lighting rep agencies in the US and Canada. Get a free mockup of your new homepage, built from your current site. Nothing to prepare. Yours to keep." />
+    <meta name="theme-color" content="#f2f0eb" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://graphigoat.com/" />
+    <link rel="alternate" hreflang="en" href="https://graphigoat.com/" />
+    <link rel="alternate" hreflang="fr-CA" href="https://graphigoat.com/fr/" />
+    <link rel="alternate" hreflang="x-default" href="https://graphigoat.com/" />
+    <link rel="preload" href="/brand/emblem.svg" as="image" type="image/svg+xml" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="GraphiGOAT" />
-    <meta property="og:locale" content="en_CA" />
+    <meta property="og:title" content="GraphiGOAT · Websites for lighting rep agencies" />
+    <meta property="og:description" content="A free mockup of your new homepage, built from your current site. Nothing to prepare. Yours to keep." />
+    <meta property="og:image" content="https://graphigoat.com/og.jpg" />
+    <meta property="og:url" content="https://graphigoat.com/" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:locale:alternate" content="fr_CA" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="theme-color" content="#1c2c4c" />
-    <meta name="color-scheme" content="light" />
-    <!-- Fonts are self-hosted via @font-face in src/index.css (files in
-         public/fonts/), removing the render-blocking third-party Google Fonts
-         request. Fraunces is the hero H1 = the LCP element, so it is
-         preloaded to eliminate the swap-reflow on first paint. -->
-    <link
-      rel="preload"
-      href="/fonts/fraunces-latin.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <title>GraphiGOAT | The Clarity Engine</title>
-    <script type="module" crossorigin src="/assets/main-B7USkPCb.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/main-CGfuLCuF.css">
-    <link rel="alternate" hreflang="en-CA" href="/">
-    <link rel="alternate" hreflang="fr-CA" href="/fr/">
-    <link rel="alternate" hreflang="x-default" href="/">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "GraphiGOAT",
+        "url": "https://graphigoat.com/",
+        "logo": "https://graphigoat.com/brand/emblem.svg",
+        "founder": { "@type": "Person", "name": "Mohamed Nassa" },
+        "description": "Websites for lighting rep agencies in the US and Canada.",
+        "areaServed": ["US", "CA"],
+        "knowsLanguage": ["en", "fr"],
+        "sameAs": ["https://www.upwork.com/freelancers/~01b85016879a5920ae"]
+      }
+    </script>
+    <script>
+      document.documentElement.classList.add('fx')
+      try {
+        if (localStorage.getItem('lf-motion') === 'reduce') document.documentElement.classList.add('is-reduced')
+        var q = new URLSearchParams(location.search).get('via')
+        if (q === 'upwork') sessionStorage.setItem('gg-via', 'upwork')
+        if (q === 'direct') sessionStorage.removeItem('gg-via')
+        if (sessionStorage.getItem('gg-via') === 'upwork') document.documentElement.classList.add('via-upwork')
+      } catch (e) {}
+    </script>
+    <script type="module" src="/src/main.ts"></script>
   </head>
   <body>
-    <div id="root"></div>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header" data-header data-scroll-offset>
+      <a class="brand" href="#top" aria-label="GraphiGOAT, back to top">
+        <img class="brand__emblem" src="/brand/emblem.svg" width="529" height="798" alt="" />
+        <img class="brand__word" src="/brand/wordmark.svg" width="1046" height="194" alt="GraphiGOAT" />
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#mockup">The mockup</a>
+        <a href="#work">Work</a>
+        <a href="#proof">Proof</a>
+        <a href="#how">How it works</a>
+        <a href="#price">Price</a>
+      </nav>
+      <div class="header__end">
+        <a class="lang" href="/fr/" hreflang="fr-CA" lang="fr-CA">FR</a>
+        <a class="pill pill--small" href="#get"><span class="pill__dot" aria-hidden="true"></span>Free mockup</a>
+      </div>
+    </header>
+
+    <main id="content" tabindex="-1">
+      <!-- 01 · Hero: the emblem, lit like a product, with the offer as its spec callouts -->
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero__light" aria-hidden="true">
+          <div class="hero__beam" data-beam></div>
+          <div class="hero__pool"></div>
+        </div>
+
+        <div class="hero__copy">
+          <p class="eyebrow" data-reveal="fade" data-reveal-on="load">Websites for lighting rep agencies · US &amp; Canada</p>
+          <h1 id="hero-title" class="hero__title">
+            <span class="hero__line" data-reveal="lines" data-reveal-on="load">Your new</span>
+            <span class="hero__line" data-reveal="lines" data-reveal-on="load" data-reveal-delay="0.08">homepage,</span>
+            <span class="sr-only"> on me.</span>
+          </h1>
+        </div>
+
+        <div class="hero__side">
+          <p class="badge-check" data-reveal="fade" data-reveal-on="load" data-reveal-delay="0.2">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" /></svg>
+            NSL and Magic Lite are clients
+          </p>
+          <p class="hero__onme" aria-hidden="true" data-reveal="lines" data-reveal-on="load" data-reveal-delay="0.1">On me.</p>
+          <p class="hero__sub" data-reveal="fade" data-reveal-on="load" data-reveal-delay="0.3">
+            I'll sketch the first screen of your new homepage from what's already on your site. If you like it, we take it
+            from there. If not, no hard feelings.
+          </p>
+          <div class="hero__cta" data-reveal="fade" data-reveal-on="load" data-reveal-delay="0.4">
+            <a class="pill" href="#get"><span class="pill__dot" aria-hidden="true"></span>Get my free mockup</a>
+            <p class="hero__reply">Got my email? Just reply “yes”.</p>
+          </div>
+        </div>
+
+        <div class="stage" data-stage>
+          <div class="badge" data-badge>
+            <div class="badge__body" data-badge-body>
+              <img class="badge__face" src="/brand/emblem.svg" width="529" height="798" alt="The GraphiGOAT emblem, lit from above" fetchpriority="high" />
+              <span class="badge__sheen" aria-hidden="true"></span>
+            </div>
+            <span class="badge__shadow" aria-hidden="true"></span>
+          </div>
+
+          <ul class="specs" role="list" aria-label="The offer at a glance">
+            <li class="spec spec--a" data-reveal="rise" data-reveal-on="load" data-reveal-delay="0.5">
+              <span class="spec__label">Mockup</span>
+              <span class="spec__value">Free</span>
+              <span class="spec__text">The first screen of your new homepage.</span>
+              <svg class="spec__glyph" viewBox="0 0 64 28" aria-hidden="true"><rect x="1" y="1" width="62" height="26" rx="3" /><path d="M1 7h62M6 13h22M6 18h14M38 12h20v10H38z" /></svg>
+            </li>
+            <li class="spec spec--b" data-reveal="rise" data-reveal-on="load" data-reveal-delay="0.6">
+              <span class="spec__label">To prepare</span>
+              <span class="spec__value">0</span>
+              <span class="spec__text">I work from your current site.</span>
+              <svg class="spec__glyph" viewBox="0 0 64 28" aria-hidden="true"><path d="M2 22h8l6-14 8 18 7-12 6 6h25" /></svg>
+            </li>
+            <li class="spec spec--c" data-reveal="rise" data-reveal-on="load" data-reveal-delay="0.7">
+              <span class="spec__label">Turnaround</span>
+              <span class="spec__value">48 h</span>
+              <span class="spec__text">From your “yes” to your inbox.</span>
+              <svg class="spec__glyph" viewBox="0 0 64 28" aria-hidden="true"><path d="M2 20h60" /><path class="is-on" d="M2 20h44" /><circle cx="46" cy="20" r="3" /></svg>
+            </li>
+            <li class="spec spec--d" data-reveal="rise" data-reveal-on="load" data-reveal-delay="0.8">
+              <span class="spec__label">If you say no</span>
+              <span class="spec__value">Yours</span>
+              <span class="spec__text">You keep the mockup.</span>
+              <svg class="spec__glyph" viewBox="0 0 64 28" aria-hidden="true"><circle cx="14" cy="14" r="8" /><path d="M22 14h36M50 14v7M56 14v5" /></svg>
+            </li>
+          </ul>
+        </div>
+
+        <p class="hero__scroll" aria-hidden="true"><span></span>Scroll</p>
+      </section>
+
+      <!-- 02 · The mockup: what lands in the inbox (an example, clearly marked) -->
+      <section class="mockup section-pad" id="mockup" aria-labelledby="mockup-title">
+        <div class="section-head">
+          <p class="label">01 · What you get</p>
+          <h2 id="mockup-title" class="h2" data-reveal="lines">This is what lands in your inbox.</h2>
+          <p class="lead" data-reveal="fade">
+            The first screen of your new homepage, desktop and mobile, built from your own content: your lines, your
+            territory, your contact details.
+          </p>
+        </div>
+
+        <div class="devices" data-reveal="rise">
+          <p class="tag"><span class="tag__dot" aria-hidden="true"></span>Example. Your mockup uses your own content and stays private.</p>
+
+          <div class="devices__stage">
+          <figure class="laptop" aria-label="Example of a mockup: the first screen of a lighting rep agency homepage">
+            <div class="laptop__screen">
+              <div class="mini" aria-hidden="true">
+                <div class="mini__bar">
+                  <span class="mini__logo"><i></i>Your Agency</span>
+                  <span class="mini__nav"><b>Lines</b><b>Spec library</b><b>Projects</b><b>Team</b><b>Contact</b></span>
+                  <span class="mini__btn">Start a project</span>
+                </div>
+                <div class="mini__hero">
+                  <div class="mini__copy">
+                    <span class="mini__kicker">Architectural lighting · Your territory</span>
+                    <span class="mini__title">Every line we carry. Every spec, one search away.</span>
+                    <span class="mini__search"><i></i>Find a spec sheet or IES file<em>Search</em></span>
+                  </div>
+                  <div class="mini__sheet">
+                    <span class="mini__sheet-head">Spec sheet · IES · BIM</span>
+                    <svg viewBox="-100 -6 200 112"><path class="g" d="M-90 0 A90 90 0 0 0 90 0 M-60 0 A60 60 0 0 0 60 0 M-30 0 A30 30 0 0 0 30 0 M0 0 L0 92 M0 0 L64 64 M0 0 L-64 64" /><path class="c" d="M0 0 C 18 30, 22 70, 0 88 C -22 70, -18 30, 0 0Z" /><path class="d" d="M0 0 C 40 20, 52 52, 0 66 C -52 52, -40 20, 0 0Z" /></svg>
+                    <span class="mini__sheet-row"><b>Download</b><i>PDF</i><i>IES</i><i>BIM</i></span>
+                  </div>
+                </div>
+                <div class="mini__lines">
+                  <span class="mini__lines-label">Our lines</span>
+                  <span class="mini__logos"><b class="w1">LINE A</b><b class="w2">Line B</b><b class="w3">LINE·C</b><b class="w4">line d</b><b class="w5">LINE E</b><b class="w6">Line F</b><b class="w7">LINE G</b><b class="w8">line h</b></span>
+                </div>
+              </div>
+            </div>
+            <div class="laptop__base" aria-hidden="true"></div>
+          </figure>
+
+          <figure class="phone" aria-label="The same first screen on a phone">
+            <div class="phone__screen">
+              <div class="mini mini--phone" aria-hidden="true">
+                <div class="mini__bar"><span class="mini__logo"><i></i>Your Agency</span><span class="mini__burger"></span></div>
+                <span class="mini__kicker">Architectural lighting</span>
+                <span class="mini__title">Every line we carry. Every spec, one search away.</span>
+                <span class="mini__search"><i></i>Find a spec sheet</span>
+                <span class="mini__logos"><b class="w1">LINE A</b><b class="w2">Line B</b><b class="w3">LINE·C</b><b class="w4">line d</b></span>
+                <span class="mini__btn mini__btn--wide">Start a project</span>
+              </div>
+            </div>
+          </figure>
+          </div>
+
+          <ul class="callouts" role="list">
+            <li><span class="callouts__k">Line card</span>Every line you carry, readable at a glance.</li>
+            <li><span class="callouts__k">Spec finder</span>Spec sheets and IES files, one search away.</li>
+            <li><span class="callouts__k">Project requests</span>One clear button, the right questions.</li>
+            <li><span class="callouts__k">EN · FR-CA</span>Canadian French, if your agency wants it.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 02 · Shipped work: the room turns with the scroll; each project opens as a datasheet -->
+      <section class="work" id="work" aria-labelledby="work-title">
+        <div class="section-head work__head">
+          <p class="label">02 · Shipped</p>
+          <h2 id="work-title" class="h2" data-reveal="lines">After the mockup, I build it. Like these.</h2>
+          <p class="work__meta">3 client sites · 1 concept · 0 templates</p>
+        </div>
+
+        <div class="pano" data-effect="pano" data-effect-media="(min-width: 900px)">
+          <div class="pano__stage">
+            <div class="pano__light" aria-hidden="true"></div>
+            <div class="pano__ring">
+              <article class="wcard" aria-labelledby="wcard-kaliva">
+                <figure class="wcard__media" data-effect="work-media">
+                  <img src="/media/work/kaliva/poster.webp" srcset="/media/work/kaliva/poster.webp 1440w, /media/work/kaliva/poster@2x.webp 2560w" sizes="(min-width: 900px) 44vw, 92vw" alt="Kaliva's home page: a 3D relief of Switzerland, with a lens that dives into the map." loading="lazy" decoding="async" width="1440" height="810" />
+                  <video muted loop playsinline preload="none" data-src="/media/work/kaliva/loop.mp4" data-src-small="/media/work/kaliva/loop-small.mp4" aria-hidden="true" tabindex="-1"></video>
+                </figure>
+                <div class="wcard__body">
+                  <p class="wcard__status"><i class="dot dot--live"></i>Live</p>
+                  <h3 class="wcard__name" id="wcard-kaliva">Kaliva</h3>
+                  <button class="wcard__open" type="button" data-sheet-open="kaliva">Datasheet<span class="sr-only">: Kaliva</span> <span aria-hidden="true">↗</span></button>
+                  <p class="wcard__line">A private off-market property club in Switzerland: public site, members' area, secure files for banks.</p>
+                  <p class="wcard__proves"><span>Proves</span>A site that does business. Members make their offers on it.</p>
+                </div>
+              </article>
+              <article class="wcard" aria-labelledby="wcard-zyllow">
+                <figure class="wcard__media" data-effect="work-media">
+                  <img src="/media/work/zyllow/poster.webp" srcset="/media/work/zyllow/poster.webp 1440w, /media/work/zyllow/poster@2x.webp 2560w" sizes="(min-width: 900px) 44vw, 92vw" alt="Zyllow's headline: “Reprint your menu” is struck out in red marker, “Edit” is written by hand, and the phone beside it updates its prices." loading="lazy" decoding="async" width="1440" height="810" />
+                  <video muted loop playsinline preload="none" data-src="/media/work/zyllow/loop.mp4" data-src-small="/media/work/zyllow/loop-small.mp4" aria-hidden="true" tabindex="-1"></video>
+                </figure>
+                <div class="wcard__body">
+                  <p class="wcard__status"><i class="dot dot--soon"></i>Pre-launch</p>
+                  <h3 class="wcard__name" id="wcard-zyllow">Zyllow</h3>
+                  <button class="wcard__open" type="button" data-sheet-open="zyllow">Datasheet<span class="sr-only">: Zyllow</span> <span aria-hidden="true">↗</span></button>
+                  <p class="wcard__line">Digital menus for restaurants in Benin. One headline says it, the phone beside it shows it, live.</p>
+                  <p class="wcard__proves"><span>Proves</span>Clear at first glance. The whole offer fits in one headline.</p>
+                </div>
+              </article>
+              <article class="wcard" aria-labelledby="wcard-nassa">
+                <figure class="wcard__media" data-effect="work-media">
+                  <img src="/media/work/nassa/poster.webp" srcset="/media/work/nassa/poster.webp 1440w, /media/work/nassa/poster@2x.webp 2560w" sizes="(min-width: 900px) 44vw, 92vw" alt="Nassa Energy Plus: a golden oil sculpture moves under the pointer's light, next to the headline “Oils. Greases. Parts.”" loading="lazy" decoding="async" width="1440" height="810" />
+                  <video muted loop playsinline preload="none" data-src="/media/work/nassa/loop.mp4" data-src-small="/media/work/nassa/loop-small.mp4" aria-hidden="true" tabindex="-1"></video>
+                </figure>
+                <div class="wcard__body">
+                  <p class="wcard__status"><i class="dot dot--done"></i>Delivered</p>
+                  <h3 class="wcard__name" id="wcard-nassa">Nassa Energy Plus</h3>
+                  <button class="wcard__open" type="button" data-sheet-open="nassa">Datasheet<span class="sr-only">: Nassa Energy Plus</span> <span aria-hidden="true">↗</span></button>
+                  <p class="wcard__line">Lubricants and parts for fleets and job sites in Abidjan. Quotes come in through a WhatsApp builder.</p>
+                  <p class="wcard__proves"><span>Proves</span>Qualified requests. Visitors pick options instead of facing a blank message.</p>
+                </div>
+              </article>
+              <article class="wcard" aria-labelledby="wcard-clinic">
+                <figure class="wcard__media" data-effect="work-media">
+                  <img src="/media/work/clinic/poster.webp" sizes="(min-width: 900px) 44vw, 92vw" alt="Dental clinic concept: a calm home page with the headline “Your situation deserves to be understood before it is treated.”" loading="lazy" decoding="async" width="1440" height="810" />
+                  <video muted loop playsinline preload="none" data-src="/media/work/clinic/loop.mp4" data-src-small="/media/work/clinic/loop-small.mp4" aria-hidden="true" tabindex="-1"></video>
+                </figure>
+                <div class="wcard__body">
+                  <p class="wcard__status"><i class="dot dot--concept"></i>Concept</p>
+                  <h3 class="wcard__name" id="wcard-clinic">A dental clinic</h3>
+                  <button class="wcard__open" type="button" data-sheet-open="clinic">Datasheet<span class="sr-only">: dental clinic concept</span> <span aria-hidden="true">↗</span></button>
+                  <p class="wcard__line">A concept, not a client. Every fact on the page carries the date it was checked.</p>
+                  <p class="wcard__proves"><span>Shows</span>Dated information. Nothing on the page goes stale unnoticed.</p>
+                </div>
+              </article>
+            </div>
+            <ol class="pano__index" aria-label="Projects">
+              <li><button type="button">Kaliva</button></li>
+              <li><button type="button">Zyllow</button></li>
+              <li><button type="button">Nassa Energy Plus</button></li>
+              <li><button type="button">Dental clinic</button></li>
+            </ol>
+            <p class="pano__hint" aria-hidden="true"><span></span>Scroll to turn the room</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 · Why it pays: the rep's three stakes -->
+      <section class="why section-pad" id="why" aria-labelledby="why-title">
+        <div class="section-head">
+          <p class="label">03 · Why it pays</p>
+          <h2 id="why-title" class="h2" data-reveal="lines">Built for how reps win.</h2>
+        </div>
+        <ol class="stakes" role="list" data-reveal-group>
+          <li class="stake" data-reveal="rise">
+            <span class="stake__n">01</span>
+            <h3>Win new lines.</h3>
+            <p>Before a manufacturer hands you a line, they look you up. Your site should sell your agency as well as you do.</p>
+          </li>
+          <li class="stake" data-reveal="rise">
+            <span class="stake__n">02</span>
+            <h3>Get your lines specified.</h3>
+            <p>Spec sheets and IES files one click from your line card, straight from each manufacturer's official documents.</p>
+          </li>
+          <li class="stake" data-reveal="rise">
+            <span class="stake__n">03</span>
+            <h3>Get real project requests.</h3>
+            <p>One clear button, and a short form that asks what you need to quote. In English, and in Canadian French if you want it.</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 04 · Proof -->
+      <section class="proof section-pad" id="proof" aria-labelledby="proof-title">
+        <div class="section-head">
+          <p class="label">04 · Proof</p>
+          <h2 id="proof-title" class="h2" data-reveal="lines">1,107 hours inside lighting documentation.</h2>
+        </div>
+
+        <div class="proof__grid">
+          <article class="card card--hours" data-reveal="rise">
+            <p class="card__label">Magic Lite · technical documentation</p>
+            <p class="card__big">1,107<span>h</span></p>
+            <p class="card__text">Light fixture instructions, May 2024 to December 2025. Rated 5/5. Hired again in 2026.</p>
+            <div class="ring" style="--p: 82" role="img" aria-label="82% of my Upwork hours were spent on lighting">
+              <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="ring__track" cx="60" cy="60" r="52" /><circle class="ring__bar" cx="60" cy="60" r="52" pathLength="100" /></svg>
+              <span class="ring__value">82%</span>
+              <span class="ring__caption">of my Upwork hours, on lighting</span>
+            </div>
+          </article>
+
+          <figure class="card card--quote" data-reveal="rise">
+            <blockquote>
+              <p>“He is a clear and reliable communicator, delivers excellent work, and consistently understands both creative and technical requirements.”</p>
+            </blockquote>
+            <figcaption>Magic Lite · review on Upwork</figcaption>
+          </figure>
+
+          <article class="card card--clients" data-reveal="rise">
+            <p class="card__label">Clients</p>
+            <p class="card__names">NSL<br />Magic Lite</p>
+            <p class="card__text">Two lighting manufacturers. Their reps may be reading this.</p>
+          </article>
+
+          <dl class="card card--stats" data-reveal="rise">
+            <div><dt>Upwork</dt><dd>Top Rated</dd></div>
+            <div><dt>Jobs</dt><dd>77</dd></div>
+            <div><dt>Reviews</dt><dd>56</dd></div>
+            <div><dt>Hours</dt><dd>1,351</dd></div>
+          </dl>
+        </div>
+        <p class="note">Figures read on Upwork, November 4, 2026.</p>
+      </section>
+
+      <!-- 05 · How it works -->
+      <section class="how section-pad" id="how" aria-labelledby="how-title">
+        <div class="section-head">
+          <p class="label">05 · How it works</p>
+          <h2 id="how-title" class="h2" data-reveal="lines">Three steps. One of them is yours.</h2>
+        </div>
+        <ol class="steps" role="list" data-reveal-group>
+          <li class="step" data-reveal="rise">
+            <span class="step__n">01 · You</span>
+            <h3>Reply “yes”.</h3>
+            <p>Or send your site with the form below. That's all I need.</p>
+          </li>
+          <li class="step" data-reveal="rise">
+            <span class="step__n">02 · Me</span>
+            <h3>Your mockup, within 48 hours.</h3>
+            <p>The first screen of your new homepage, desktop and mobile, as an image in your inbox.</p>
+          </li>
+          <li class="step" data-reveal="rise">
+            <span class="step__n">03 · You decide</span>
+            <h3>Go, or keep it.</h3>
+            <p>If you like it, we scope your site together. If not, the mockup is yours to keep.</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 06 · Price -->
+      <section class="price section-pad" id="price" aria-labelledby="price-title">
+        <div class="price__inner">
+          <p class="label">06 · Price</p>
+          <h2 id="price-title" class="h2 price__title" data-reveal="lines">Scoped to your budget. <em>Never to your standards.</em></h2>
+          <div class="price__text" data-reveal="fade">
+            <p>Tell me what you want to spend. We shape the scope to fit, in writing, before anything starts. Paid in stages.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 07 · Get the mockup -->
+      <section class="get section-pad" id="get" aria-labelledby="get-title">
+        <div class="get__inner">
+          <div class="get__head">
+            <p class="label">07 · Your free mockup</p>
+            <h2 id="get-title" class="h2" data-reveal="lines">Send your site. I'll do the rest.</h2>
+            <p class="lead only-direct">Four fields, and you're done. I reply personally.</p>
+          </div>
+
+          <form class="form only-direct" name="contact" method="POST" data-netlify="true" netlify-honeypot="company-url" data-form>
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="sr-only"><label>Leave this empty <input name="company-url" tabindex="-1" autocomplete="off" /></label></p>
+            <label class="field field--wide"><span>Your current website</span><input name="website" type="url" inputmode="url" placeholder="https://" required /></label>
+            <label class="field"><span>Your name</span><input name="name" autocomplete="name" required /></label>
+            <label class="field"><span>Your agency</span><input name="agency" autocomplete="organization" required /></label>
+            <label class="field field--wide"><span>Where should I send the mockup?</span><input name="reply" type="email" autocomplete="email" placeholder="you@agency.com" required /></label>
+            <label class="field field--wide"><span>Anything I should know? <i>(optional)</i></span><textarea name="message" rows="3"></textarea></label>
+            <div class="form__end">
+              <button class="pill" type="submit"><span class="pill__dot" aria-hidden="true"></span>Send me my mockup</button>
+              <p class="form__status" role="status" aria-live="polite" data-form-status></p>
+            </div>
+          </form>
+
+          <div class="upwork only-upwork">
+            <p>We're talking on Upwork, so let's keep it there.</p>
+            <a class="pill" href="https://www.upwork.com/freelancers/~01b85016879a5920ae" rel="noopener" target="_blank"><span class="pill__dot" aria-hidden="true"></span>Message me on Upwork</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__brand">
+        <img class="site-footer__emblem" src="/brand/emblem.svg" width="529" height="798" alt="" loading="lazy" />
+        <div>
+          <img class="site-footer__word" src="/brand/wordmark.svg" width="1046" height="194" alt="GraphiGOAT" loading="lazy" />
+          <p class="site-footer__slogan">Win the line. Win the spec. Win the job.</p>
+        </div>
+      </div>
+      <div class="site-footer__base">
+        <span>Mohamed · GraphiGOAT</span>
+        <a class="only-direct" href="https://www.upwork.com/freelancers/~01b85016879a5920ae" rel="noopener" target="_blank">Upwork profile</a>
+        <a href="/fr/" hreflang="fr-CA" lang="fr-CA">Version française</a>
+        <button class="motion-toggle" type="button" data-motion-toggle aria-pressed="false">Reduce motion</button>
+        <span>© 2026 GraphiGOAT</span>
+      </div>
+    </footer>
+    <dialog class="sheet" id="sheet" aria-labelledby="sheet-title">
+      <div class="sheet__inner" data-sheet-body></div>
+      <form method="dialog" class="sheet__close"><button type="submit">Close</button></form>
+    </dialog>
+
+    <template id="sheet-kaliva">
+      <p class="sheet__kind">Datasheet · 01 / 04</p>
+      <h2 class="sheet__title" id="sheet-title">Kaliva</h2>
+      <p class="sheet__line">Private off-market real-estate club, Switzerland.</p>
+      <dl class="sheet__spec">
+        <div><dt>Status</dt><dd>Live</dd></div>
+        <div><dt>Built</dt><dd>Public site and members' club, an API, secure links for banks, and a back office the team runs in French</dd></div>
+        <div><dt>Signature</dt><dd>A 3D relief of Switzerland, and a lens that dives into the map</dd></div>
+        <div><dt>Measured</dt><dd class="sheet__num">147 back-end tests</dd></div>
+        <div class="is-rep"><dt>For your agency</dt><dd>Line card, spec library and project requests can live behind one clean site your team runs.</dd></div>
+      </dl>
+    </template>
+    <template id="sheet-zyllow">
+      <p class="sheet__kind">Datasheet · 02 / 04</p>
+      <h2 class="sheet__title" id="sheet-title">Zyllow</h2>
+      <p class="sheet__line">QR-code menus for restaurants, Parakou, Benin.</p>
+      <dl class="sheet__spec">
+        <div><dt>Status</dt><dd>Pre-launch</dd></div>
+        <div><dt>Built</dt><dd>The landing page and its live demo menu. The platform itself is built by Biozira</dd></div>
+        <div><dt>Signature</dt><dd>The headline strikes out an old habit, and the phone beside it updates its prices live</dd></div>
+        <div><dt>Measured</dt><dd class="sheet__num">Layout shift 0 in every QA run</dd></div>
+        <div class="is-rep"><dt>For your agency</dt><dd>One headline says what you sell. A specifier gets it before scrolling.</dd></div>
+      </dl>
+    </template>
+    <template id="sheet-nassa">
+      <p class="sheet__kind">Datasheet · 03 / 04</p>
+      <h2 class="sheet__title" id="sheet-title">Nassa Energy Plus</h2>
+      <p class="sheet__line">Lubricants and parts for fleets, job sites and workshops, Abidjan, Côte d'Ivoire.</p>
+      <dl class="sheet__spec">
+        <div><dt>Status</dt><dd>Delivered</dd></div>
+        <div><dt>Built</dt><dd>A landing page redesign, from a diagnosis of 8 conversion blockers, and a WhatsApp quote builder: options to tap instead of fields, with a live preview of the message</dd></div>
+        <div><dt>Signature</dt><dd>Living oil, drawn in WebGL</dd></div>
+        <div><dt>Measured</dt><dd class="sheet__num">8 KB hero image on phones</dd></div>
+        <div class="is-rep"><dt>For your agency</dt><dd>Requests arrive qualified, the way a project request for your lines should.</dd></div>
+      </dl>
+    </template>
+    <template id="sheet-clinic">
+      <p class="sheet__kind">Datasheet · 04 / 04</p>
+      <h2 class="sheet__title" id="sheet-title">A dental clinic</h2>
+      <p class="sheet__line">Family dentistry, Burkina Faso. Concept, not commissioned.</p>
+      <dl class="sheet__spec">
+        <div><dt>Status</dt><dd>Concept · not a client</dd></div>
+        <div><dt>Built</dt><dd>Home page, first-visit guide and an appointment request, as a prototype that sends no data</dd></div>
+        <div><dt>Signature</dt><dd>Every fact on the page carries the date it was checked</dd></div>
+        <div><dt>Measured</dt><dd class="sheet__num">73 of 73 end-to-end tests · 245 KB home page on mobile · 0 serious accessibility violations</dd></div>
+        <div class="is-rep"><dt>For your agency</dt><dd>Spec data with the date it was checked: no outdated sheet ends up in a bid.</dd></div>
+      </dl>
+    </template>
   </body>
 </html>

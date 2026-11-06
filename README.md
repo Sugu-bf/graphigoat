@@ -1,68 +1,48 @@
-# 🐐 GraphiGOAT Static Site
+# GraphiGOAT
 
-[![Docker Image](https://img.shields.io/badge/Docker-Enabled-blue.svg?logo=docker&logoColor=white)](./Dockerfile)
-[![Nginx](https://img.shields.io/badge/Nginx-Served-green.svg?logo=nginx&logoColor=white)](https://nginx.org)
-[![Platform](https://img.shields.io/badge/Platform-Static--HTML-orange.svg)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+Landing page construite avec Landing Forge (HTML, CSS, TypeScript, GSAP, Vite).
 
-Welcome to the official repository for **GraphiGOAT**. This is a high-performance static website designed to be served directly from any standard web server or containerized using Docker.
+## Lancer
 
----
-
-## 📁 Repository Structure
-
-```text
-graphigoat/
-├── assets/                     # Global static assets (logos, favicons, etc.)
-├── ml/
-│   └── workstreams/            # Client portal (private/unlinked tool)
-│       ├── index.html          # Interactive client workstream dashboard
-│       └── support.js          # App state logic (localStorage)
-├── Dockerfile                  # Containerization instructions (Nginx-based)
-├── .dockerignore               # Build context exclusions
-├── index.html                  # Public homepage
-└── README.md                   # You are here!
-```
-
----
-
-## 🌐 Pages & Access
-
-| Page | URL Path | Visibility / SEO |
-| :--- | :--- | :--- |
-| **Public Homepage** | `/index.html` or `/` | Publicly indexed and searchable. |
-| **Magic Lite Workstreams** | `/ml/workstreams/` | Private client page (`noindex, nofollow`). Unlinked from the homepage. |
-
-> [!NOTE]  
-> The **Magic Lite Workstreams** client page is fully static and client-side. Budget entries, workstream selections, and comments are saved securely within the **visitor's local browser storage (`localStorage`)**. No backend server is required to store this information.
-
----
-
-## 🐳 Docker Deployment
-
-The project is packaged with a lightweight Docker configuration using `nginx:alpine`.
-
-### 1. Build the Docker Image
-To build the image locally:
 ```bash
-docker build -t graphigoat .
+npm install
+npm run dev
 ```
 
-### 2. Run the Container
-To run the container and map it to port `8080` on your host machine:
+Puis ouvrir l'adresse affichée (http://localhost:5173).
+
+## Modifier
+
+- **Textes et sections** : `index.html` (une section par bloc de la page).
+- **Couleurs, polices, tailles** : `src/styles/tokens.css`.
+- **Mise en page** : `src/styles/site.css`.
+- **Effets** : chaque élément animé porte `data-effect="nom"` ; le code est dans `src/effects/nom/`, ses options dans
+  `src/effects/nom/effect.json`.
+- **Images** : déposer les originaux dans un dossier, puis `npm run media -- chemin/des/images` (formats AVIF et WebP
+  aux bonnes tailles, code HTML à copier).
+
+## Vérifier avant de livrer
+
 ```bash
-docker run -d -p 8080:80 --name graphigoat-app graphigoat
+npm run build
+npm run preview
 ```
-Once started, the website will be available at [http://localhost:8080](http://localhost:8080).
 
----
+Dans un second terminal, pendant que `preview` tourne :
 
-## 🚀 Cloud Deployment (e.g. Coolify, Vercel)
+```bash
+npm run qa -- --url http://localhost:4173 --motion both
+```
 
-This repository is optimized for instant deployment:
-- **Coolify / Docker-based Hosts**: Automatically detects the `Dockerfile` and exposes port `80`.
-- **Static Hosting (Netlify, Vercel, GitHub Pages)**: Can be deployed directly by pointing the build output to the root directory `/` (no compilation step needed).
+Le rapport est dans `qa/report.md` (erreurs, débordements, accessibilité, poids, vitesse) avec les captures.
 
----
+## Mettre en ligne
 
-## 🛡️ Security & Privacy
-- Access to the client directory `/ml/workstreams/` is obscured and unlinked, but remains publicly accessible via direct URL. If true access restriction is required, configure password protection (basic auth) at the server level (e.g., in Nginx or your hosting panel).
+`npm run build` produit le dossier `dist/`, à publier tel quel (Netlify, Vercel, Cloudflare Pages, ou tout hébergement
+statique). `netlify.toml` est déjà prêt pour Netlify.
+
+## Documents du projet
+
+- `docs/BRIEF.md` : ce qui a été demandé, ce qui a été supposé.
+- `docs/DESIGN.md` : la direction artistique et ses raisons.
+- `docs/CREDITS.md` : sources et licences des ressources.

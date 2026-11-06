@@ -1,0 +1,285 @@
+/* Modern reset, typography and layout primitives. Kept small: projects build their own components on top. */
+
+@layer reset, base, layout;
+
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    hanging-punctuation: first last;
+  }
+
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  img,
+  video {
+    height: auto;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+    color: inherit;
+  }
+
+  button {
+    cursor: pointer;
+    background: none;
+    border: 0;
+    padding: 0;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+
+  ul[role='list'],
+  ol[role='list'] {
+    list-style: none;
+    padding: 0;
+  }
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    background: var(--c-bg);
+    color: var(--c-ink);
+    font-family: var(--f-text);
+    font-size: 100%;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    min-height: 100svh;
+    font-size: var(--step-0);
+    overflow-x: clip;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--f-display);
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  h1 {
+    font-size: var(--step-6);
+  }
+
+  h2 {
+    font-size: var(--step-4);
+  }
+
+  h3 {
+    font-size: var(--step-2);
+  }
+
+  p {
+    text-wrap: pretty;
+    max-width: var(--measure);
+  }
+
+  ::selection {
+    background: var(--c-accent);
+    color: var(--c-accent-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--c-accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* Reveals: hidden only while JavaScript is in charge and the page is not ready yet (see core/reveal.ts). */
+  html.fx:not(.fx-ready) [data-reveal],
+  html.fx:not(.fx-ready) [data-reveal-group] > * {
+    opacity: 0;
+    /* Safety net if the script never runs: shown after the loader's longest possible wait. */
+    animation: lf-failsafe 0s linear 9s forwards;
+  }
+
+  @keyframes lf-failsafe {
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* .is-reduced: the system setting or the site's own motion toggle (added early by the inline head script). */
+  html.is-reduced.fx:not(.fx-ready) [data-reveal],
+  html.is-reduced.fx:not(.fx-ready) [data-reveal-group] > * {
+    opacity: 1;
+    animation: none;
+  }
+
+  html.is-reduced {
+    scroll-behavior: auto;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html.fx:not(.fx-ready) [data-reveal],
+    html.fx:not(.fx-ready) [data-reveal-group] > * {
+      opacity: 1;
+      animation: none;
+    }
+
+    *,
+    *::before,
+    *::after {
+      scroll-behavior: auto !important;
+    }
+  }
+
+  html.is-scroll-locked {
+    overflow: hidden;
+  }
+
+  /*
+    Optional loader (core/loader.ts): <div data-loader aria-hidden="true"><p data-loader-content><span
+    data-loader-count>0</span> %</p></div>. Real progress in --progress (0 → 1). Only shown while JavaScript runs,
+    and never longer than 10 s even if the script fails.
+  */
+  [data-loader] {
+    position: fixed;
+    inset: 0;
+    z-index: 9000;
+    display: grid;
+    place-items: center;
+    background: var(--c-bg);
+    color: var(--c-ink);
+    animation: lf-loader-failsafe 0s linear 10s forwards;
+  }
+
+  [data-loader]::after {
+    content: '';
+    position: absolute;
+    inset: auto 0 0;
+    height: 2px;
+    background: currentColor;
+    transform-origin: left;
+    transform: scaleX(var(--progress, 0));
+  }
+
+  html:not(.fx) [data-loader] {
+    display: none;
+  }
+
+  @keyframes lf-loader-failsafe {
+    to {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+}
+
+@layer layout {
+  .container {
+    width: min(100% - 2 * var(--gutter), var(--container));
+    margin-inline: auto;
+  }
+
+  .stack > * + * {
+    margin-block-start: var(--stack-space, var(--space-s));
+  }
+
+  .cluster {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--cluster-space, var(--space-s));
+    align-items: center;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: var(--grid-gap, var(--space-m));
+  }
+
+  .section {
+    padding-block: var(--section-space, var(--space-3xl));
+    position: relative;
+  }
+}
+
+/* Utilities */
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  top: var(--space-xs);
+  left: var(--space-xs);
+  z-index: 10000;
+  padding: var(--space-2xs) var(--space-s);
+  background: var(--c-ink);
+  color: var(--c-bg);
+  border-radius: var(--radius-s);
+  text-decoration: none;
+  transform: translateY(-200%);
+  transition: transform var(--dur-xs) var(--ease-out);
+}
+
+.skip-link:focus-visible {
+  transform: none;
+}
+
+/* Lines produced by SplitText (data-reveal="lines" and text effects): the mask keeps descenders visible. */
+.split-line {
+  padding-block-end: 0.08em;
+  margin-block-end: -0.08em;
+}
+
+/* WebGL canvases created by effects. */
+.fx-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  display: block;
+}

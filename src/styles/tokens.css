@@ -1,0 +1,90 @@
+/*
+  GraphiGOAT · lit like a product.
+  A warm, light showroom backdrop, the emblem's navy for ink and its orange for the one accent.
+  Work Sans Light for titles, Parkinsans for text, JetBrains Mono for spec labels. All OFL.
+*/
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../fonts/work-sans-latin-var.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Parkinsans';
+  src: url('../fonts/parkinsans-latin-var.woff2') format('woff2');
+  font-weight: 300 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../fonts/jetbrains-mono-latin-var.woff2') format('woff2');
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --c-bg: #f2f0eb; /* Showroom wall */
+  --c-bg-hi: #fbfaf7; /* Where the beam lands */
+  --c-bg-lo: #e6e3dc; /* Falloff */
+  --c-surface: #fbfaf8;
+  --c-ink: #0e1830; /* Emblem navy, as ink */
+  --c-ink-2: #2f3a52;
+  --c-muted: #586174; /* Small text, AA on the wall */
+  --c-accent: #fd7402; /* Emblem orange: dots, marks, large display only */
+  --c-accent-text: #b04a00; /* Orange for small text (AA) */
+  --c-line: rgba(14, 24, 48, 0.13);
+  --c-line-soft: rgba(14, 24, 48, 0.07);
+  --c-glass: rgba(255, 255, 255, 0.58);
+  --c-glass-edge: rgba(255, 255, 255, 0.85);
+  --c-tbc: #fff1a8; /* "To confirm" highlight, preview only */
+
+  --f-display: 'Work Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --f-text: 'Parkinsans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --f-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --step--2: clamp(0.69rem, 0.67rem + 0.08vw, 0.75rem);
+  --step--1: clamp(0.83rem, 0.8rem + 0.15vw, 0.94rem);
+  --step-0: clamp(1rem, 0.96rem + 0.22vw, 1.13rem);
+  --step-1: clamp(1.2rem, 1.12rem + 0.4vw, 1.5rem);
+  --step-2: clamp(1.44rem, 1.3rem + 0.7vw, 2rem);
+  --step-3: clamp(1.9rem, 1.4rem + 2.2vw, 3.4rem);
+  --step-4: clamp(2.3rem, 1.4rem + 3.8vw, 4.9rem);
+  --step-hero: clamp(2.9rem, 1.1rem + 6.6vw, 8.2rem);
+
+  --space-3xs: clamp(0.25rem, 0.23rem + 0.1vw, 0.31rem);
+  --space-2xs: clamp(0.5rem, 0.46rem + 0.2vw, 0.63rem);
+  --space-xs: clamp(0.75rem, 0.7rem + 0.27vw, 0.94rem);
+  --space-s: clamp(1rem, 0.93rem + 0.36vw, 1.25rem);
+  --space-m: clamp(1.5rem, 1.39rem + 0.54vw, 1.88rem);
+  --space-l: clamp(2rem, 1.86rem + 0.71vw, 2.5rem);
+  --space-xl: clamp(3rem, 2.79rem + 1.07vw, 3.75rem);
+  --space-2xl: clamp(4rem, 3.4rem + 3vw, 6.5rem);
+  --space-3xl: clamp(5.5rem, 4rem + 7vw, 11rem);
+
+  --gutter: clamp(16px, 4vw, 48px);
+  --container: 1360px;
+  --measure: 58ch;
+
+  --radius-s: 6px;
+  --radius-m: 14px;
+  --radius-l: 22px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 1px 1px rgba(14, 24, 48, 0.04), 0 18px 40px -18px rgba(14, 24, 48, 0.28);
+  --shadow-soft: 0 30px 60px -30px rgba(14, 24, 48, 0.35);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-in: cubic-bezier(0.55, 0, 1, 0.45);
+  --ease-snap: cubic-bezier(0.2, 0.9, 0.1, 1);
+  --dur-xs: 0.25s;
+  --dur-s: 0.5s;
+  --dur-m: 0.9s;
+  --dur-l: 1.3s;
+}

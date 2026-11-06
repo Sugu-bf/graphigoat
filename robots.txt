@@ -1,4 +1,0 @@
-# GraphiGOAT: all crawlers are welcome, including AI crawlers.
-# A sitemap is emitted automatically when SITE_URL is available at build time.
-User-agent: *
-Allow: /
