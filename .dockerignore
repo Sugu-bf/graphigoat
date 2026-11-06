@@ -1,0 +1,13 @@
+node_modules
+dist
+qa
+.git
+.github
+.netlify
+.claude
+.env
+.env*.local
+docs
+*.zip
+*.log
+.DS_Store
